@@ -1,0 +1,15 @@
+pre-commit:
+  parallel: true
+
+  commands:
+    eslint:
+      run: npm run lint:ox
+
+    stylelint:
+      run: npm run lint:css
+
+    prettier:
+      run: npm run format:ox
+
+    lint-staged:
+      run: npx lint-staged

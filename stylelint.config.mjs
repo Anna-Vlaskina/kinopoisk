@@ -2,6 +2,6 @@
 export default {
   extends: ["stylelint-config-standard-scss"],
   rules: {
-    'media-feature-range-notation': 'prefix',
-  }
+    "media-feature-range-notation": "prefix",
+  },
 };
