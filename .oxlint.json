@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "style": {
+      "avoid-single-char-names": "warn",
+      "no-useless-return": "error",
+      "use-shorthand-property": "warn"
+    },
+    "correctness": {
+      "no-unused-vars": "error",
+      "no-empty": "warn",
+      "no-duplicate-imports": "error"
+    }
+  },
+  "ignore": ["node_modules", "dist", "build", "coverage", "**/*.{test,spec}.{js,jsx,ts,tsx}"]
+}

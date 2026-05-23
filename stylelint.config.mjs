@@ -1,6 +1,8 @@
-/** @type {import('stylelint').Config} */
 export default {
-  extends: ["stylelint-config-standard-scss"],
+  extends: [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recess-order",
+  ],
   rules: {
     "media-feature-range-notation": "prefix",
   },
