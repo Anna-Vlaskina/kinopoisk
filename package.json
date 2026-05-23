@@ -8,8 +8,8 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "oxlint .",
-    "lint:fix": "oxlint . --apply-suggestions",
-    "format": "oxfmt .",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt --write",
     "lint:css": "stylelint \"src/**/*.{css,scss}\"",
     "lint:css:fix": "stylelint \"src/**/*.{css,scss}\" --fix"
   },
@@ -26,19 +26,26 @@
     "lint-staged": "^16.4.0",
     "oxfmt": "^0.51.0",
     "oxlint": "^1.66.0",
+    "sass-embedded": "^1.100.0",
     "stylelint": "^17.12.0",
+    "stylelint-config-recess-order": "^7.7.0",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-order": "^8.1.1",
     "typescript": "~6.0.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "vite-plugin-svgr": "^5.2.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "oxfmt",
-      "oxlint --apply-suggestions"
+      "oxfmt --write",
+      "oxlint --fix"
     ],
     "*.{css,scss}": [
       "stylelint --fix"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "oxfmt --write"
     ]
   }
 }

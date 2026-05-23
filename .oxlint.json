@@ -9,16 +9,7 @@
       "no-unused-vars": "error",
       "no-empty": "warn",
       "no-duplicate-imports": "error"
-    },
-    "suspicious": {
-      "no-comment-text": "warn"
     }
   },
-  "ignore": [
-    "node_modules",
-    "dist",
-    "build",
-    "**/*.test.js",
-    "**/*.spec.js"
-  ]
+  "ignore": ["node_modules", "dist", "build", "coverage", "**/*.{test,spec}.{js,jsx,ts,tsx}"]
 }
