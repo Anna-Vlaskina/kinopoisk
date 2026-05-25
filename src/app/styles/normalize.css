@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 html {
@@ -16,11 +16,10 @@ ol {
 body {
   min-height: 100%;
   line-height: 1;
-  font-family: var(--font-family-main);
 }
 
 button {
   font: inherit;
-  border: none;
   cursor: pointer;
+  border: none;
 }

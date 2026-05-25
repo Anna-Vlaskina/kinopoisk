@@ -1,8 +1,5 @@
 export default {
-  extends: [
-    "stylelint-config-standard-scss",
-    "stylelint-config-recess-order",
-  ],
+  extends: ["stylelint-config-standard-scss", "stylelint-config-recess-order"],
   rules: {
     "media-feature-range-notation": "prefix",
   },

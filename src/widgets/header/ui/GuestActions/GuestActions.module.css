@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: end;
+  list-style: none;
+}
+
+.span {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white-secondary);
+}
+
+.button {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background-color: transparent;
+}

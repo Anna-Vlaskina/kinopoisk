@@ -1,0 +1,19 @@
+.navigation {
+  display: flex;
+  padding-left: 40px;
+}
+
+.list {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  list-style: none;
+}
+
+.link {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white-secondary);
+  cursor: pointer;
+  background: transparent;
+}
