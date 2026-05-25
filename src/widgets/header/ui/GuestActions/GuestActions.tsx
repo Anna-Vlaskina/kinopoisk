@@ -3,7 +3,11 @@ import SearchIcon from "../../../../shared/assets/icons/search.svg?react";
 import BellIcon from "../../../../shared/assets/icons/bell.svg?react";
 import ProfileIcon from "../../../../shared/assets/icons/profile.svg?react";
 
-const GuestActions = () => {
+interface GuestActionsProps {
+  onLogin: () => void;
+}
+
+const GuestActions = ({ onLogin }: GuestActionsProps) => {
   return (
     <div className={styles.container}>
       <button className={styles.button}>
@@ -13,7 +17,7 @@ const GuestActions = () => {
       <button className={styles.button}>
         <BellIcon />
       </button>
-      <button className={styles.button}>
+      <button className={styles.button} onClick={onLogin}>
         <ProfileIcon />
       </button>
     </div>

@@ -5,6 +5,9 @@ function App() {
   return (
     <div
       style={{
+        display: "Flex",
+        flexDirection: "column",
+        gap: "50px",
         backgroundColor: "var(--color-background)",
         fontFamily: "var(--font-family-main)",
         width: "100vw",
@@ -14,6 +17,7 @@ function App() {
     >
       <Header></Header>
       <Button variant="filled">Смотреть бесплатно</Button>
+      <Button variant="outlined">Посмотреть всё</Button>
     </div>
   );
 }
