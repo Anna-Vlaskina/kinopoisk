@@ -11,7 +11,8 @@
     "lint:fix": "oxlint --fix",
     "format": "oxfmt --write",
     "lint:css": "stylelint \"src/**/*.{css,scss}\"",
-    "lint:css:fix": "stylelint \"src/**/*.{css,scss}\" --fix"
+    "lint:css:fix": "stylelint \"src/**/*.{css,scss}\" --fix",
+    "lint:staged": "lint-staged"
   },
   "dependencies": {
     "react": "^19.2.6",
