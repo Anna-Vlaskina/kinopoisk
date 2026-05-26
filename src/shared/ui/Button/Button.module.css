@@ -1,0 +1,27 @@
+.button {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 55px;
+  padding: 18px;
+  color: var(--color-white-primary);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.icon {
+  flex-direction: row-reverse;
+}
+
+.filled {
+  background-color: var(--color-accent);
+}
+
+.outlined {
+  background-color: transparent;
+  border-color: var(--color-white-primary);
+  opacity: 0.8;
+}

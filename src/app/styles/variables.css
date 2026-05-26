@@ -1,0 +1,41 @@
+:root {
+  /* Основной белый цвет */
+  --color-white: 255 255 255;
+
+  /* Белый цвет в разной прозрачности */
+  --color-white-primary: rgb(var(--color-white) / 100%);
+  --color-white-secondary: rgb(var(--color-white) / 50%);
+  --color-white-tertiary: rgb(var(--color-white) / 35%);
+  --color-white-disabled: rgb(var(--color-white) / 20%);
+
+  /* Акцентный цвет */
+  --color-accent: rgb(237 10 50 / 100%);
+
+  /* Основной цвет фона */
+  --color-background: rgb(20 16 37 / 100%);
+
+  /* Дополнительный цвет фона */
+  --color-background-accent: rgb(26 3 53 / 100%);
+
+  /* Цвет overlay */
+  --color-overlay: rgb(28 38 127 / 50%);
+
+  /* Шрифт */
+  --font-family-main: "Inter", sans-serif;
+
+  /* Размер шрифта */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 48px;
+
+  /* Вес шрифта */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+}
