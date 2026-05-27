@@ -1,5 +1,6 @@
 import Header from "@/widgets/header";
 import Button from "@/shared/ui/Button";
+import BellIcon from "@/shared/assets/icons/bell.svg?react";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       <Header></Header>
       <Button variant="filled">Смотреть бесплатно</Button>
       <Button variant="outlined">Посмотреть всё</Button>
+      <Button variant="only-icon">
+        <BellIcon />
+      </Button>
     </div>
   );
 }

@@ -6,13 +6,6 @@
   list-style: none;
 }
 
-.button {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  background-color: transparent;
-}
-
 .image {
   width: 55px;
   height: 55px;

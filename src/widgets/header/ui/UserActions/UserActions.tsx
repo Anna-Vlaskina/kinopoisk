@@ -2,6 +2,7 @@ import styles from "./UserActions.module.css";
 import SearchIcon from "@/shared/assets/icons/search.svg?react";
 import BellIcon from "@/shared/assets/icons/bell.svg?react";
 import ProfileIcon from "@/shared/assets/icons/profile.svg?react";
+import Button from "@/shared/ui/Button";
 
 interface UserActionsProps {
   isAuth: boolean;
@@ -12,27 +13,27 @@ interface UserActionsProps {
 const UserActions = ({ isAuth, onLogin, onLogout }: UserActionsProps) => {
   return (
     <div className={styles.container}>
-      <button className={styles.button}>
+      <Button variant="only-icon">
         <SearchIcon />
         <span className={styles.span}>Поиск</span>
-      </button>
+      </Button>
 
-      <button className={styles.button}>
+      <Button variant="only-icon">
         <BellIcon />
-      </button>
+      </Button>
 
       {isAuth ? (
-        <button className={styles.button} onClick={onLogout}>
+        <Button variant="only-icon" onClick={onLogout}>
           <img
             className={styles.image}
             src="https://static.vecteezy.com/system/resources/previews/019/896/012/non_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
             alt="Аватар пользователя"
           />
-        </button>
+        </Button>
       ) : (
-        <button className={styles.button} onClick={onLogin}>
+        <Button variant="only-icon" onClick={onLogin}>
           <ProfileIcon />
-        </button>
+        </Button>
       )}
     </div>
   );
