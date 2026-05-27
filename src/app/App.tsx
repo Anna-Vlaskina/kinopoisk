@@ -1,5 +1,5 @@
-import Header from "../widgets/header";
-import Button from "../shared/ui/Button";
+import Header from "@/widgets/header";
+import Button from "@/shared/ui/Button";
 
 function App() {
   return (

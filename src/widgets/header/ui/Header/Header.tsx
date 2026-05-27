@@ -1,6 +1,6 @@
 import { useState } from "react";
 import UserActions from "../UserActions";
-import Logo from "../../../../shared/ui/Logo";
+import Logo from "@/shared/ui/Logo";
 import Navigation from "../Navigation";
 import styles from "./Header.module.css";
 
