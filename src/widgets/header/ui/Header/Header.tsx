@@ -1,5 +1,4 @@
 import { useState } from "react";
-import GuestActions from "../GuestActions";
 import UserActions from "../UserActions";
 import Logo from "../../../../shared/ui/Logo";
 import Navigation from "../Navigation";
@@ -11,12 +10,11 @@ const Header = () => {
     <header className={styles.header}>
       <Logo />
       <Navigation></Navigation>
-
-      {isAuth ? (
-        <UserActions onLogout={() => setIsAuth(false)} />
-      ) : (
-        <GuestActions onLogin={() => setIsAuth(true)} />
-      )}
+      <UserActions
+        isAuth={isAuth}
+        onLogin={() => setIsAuth(true)}
+        onLogout={() => setIsAuth(false)}
+      />
     </header>
   );
 };
