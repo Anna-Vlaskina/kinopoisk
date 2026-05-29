@@ -28,6 +28,8 @@ function App() {
         Самые сочные премьеры кино — у вас дома
       </Text>
       <Badge>Премьера</Badge>
+      <Badge variant="text">12 декабря</Badge>
+      <Badge variant="rating">7.9</Badge>
     </div>
   );
 }

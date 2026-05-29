@@ -8,6 +8,18 @@
   font: normal var(--font-weight-regular) var(--font-size-xs) var(--font-family-main);
   line-height: 140%;
   color: var(--color-accent);
+}
+
+.default {
   border: 1px solid var(--color-accent);
   border-radius: 6px;
+}
+
+.text {
+  border: none;
+}
+
+.rating {
+  font-size: var(--font-size-md);
+  border: none;
 }
