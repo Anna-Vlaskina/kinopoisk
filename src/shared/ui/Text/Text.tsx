@@ -11,6 +11,7 @@ const Text: FC<TextProps> = (props) => {
     color = "primary",
     align = "left",
     truncate = false,
+    lineHeight = "relaxed",
     className,
     children,
   } = props;
@@ -25,6 +26,12 @@ const Text: FC<TextProps> = (props) => {
     "3xl": styles["text-3xl"],
   };
 
+  const lineHeightClasses = {
+    tight: styles["line-height-tight"],
+    normal: styles["line-height-normal"],
+    relaxed: styles["line-height-relaxed"],
+  };
+
   return (
     <Tag
       className={clsx(
@@ -34,6 +41,7 @@ const Text: FC<TextProps> = (props) => {
         styles[color],
         styles[align],
         truncate && styles.truncate,
+        lineHeightClasses[lineHeight],
         className,
       )}
     >

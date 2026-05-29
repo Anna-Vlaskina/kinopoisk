@@ -73,6 +73,20 @@
   color: var(--color-white-disabled);
 }
 
+/* lineHeight */
+
+.line-height-tight {
+  line-height: 1;
+}
+
+.line-height-normal {
+  line-height: 1.2;
+}
+
+.line-height-relaxed {
+  line-height: 1.4;
+}
+
 /* AlignVariant */
 
 .left {

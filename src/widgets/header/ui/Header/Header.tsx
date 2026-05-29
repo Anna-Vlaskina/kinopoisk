@@ -1,7 +1,7 @@
 import { useState } from "react";
-import UserActions from "../UserActions";
-import Logo from "@/shared/ui/Logo";
-import Navigation from "../Navigation";
+import UserActions from "../user-actions";
+import Logo from "@/shared/ui/logo";
+import Navigation from "../navigation";
 import styles from "./Header.module.css";
 
 const Header = () => {

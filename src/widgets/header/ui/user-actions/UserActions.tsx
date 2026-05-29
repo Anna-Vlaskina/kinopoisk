@@ -2,7 +2,7 @@ import styles from "./UserActions.module.css";
 import SearchIcon from "@/shared/assets/icons/search.svg?react";
 import BellIcon from "@/shared/assets/icons/bell.svg?react";
 import ProfileIcon from "@/shared/assets/icons/profile.svg?react";
-import Button from "@/shared/ui/Button";
+import Button from "@/shared/ui/button";
 
 interface UserActionsProps {
   isAuth: boolean;

@@ -1,0 +1,7 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 500px;
+  height: fit-content;
+}
