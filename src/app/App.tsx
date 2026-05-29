@@ -2,6 +2,7 @@ import Header from "@/widgets/header";
 import Button from "@/shared/ui/Button";
 import BellIcon from "@/shared/assets/icons/bell.svg?react";
 import Text from "@/shared/ui/Text";
+import Badge from "@/shared/ui/Badge";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Text tag="h2" size="xl" weight="extrabold" color="tertiary">
         Самые сочные премьеры кино — у вас дома
       </Text>
+      <Badge>Премьера</Badge>
     </div>
   );
 }
