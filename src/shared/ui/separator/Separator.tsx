@@ -1,8 +1,16 @@
 import type { FC } from "react";
 import styles from "./Separator.module.css";
 
-const Separator: FC = () => {
-  return <span className={styles.separator}>•</span>;
+interface SeparatorProps {
+  variant?: "primary" | "secondary";
+}
+
+const Separator: FC<SeparatorProps> = ({ variant = "secondary" }) => {
+  return (
+    <div className={styles.separator}>
+      <span className={styles[variant]}>•</span>
+    </div>
+  );
 };
 
 export default Separator;

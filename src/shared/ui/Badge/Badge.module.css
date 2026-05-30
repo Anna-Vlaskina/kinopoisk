@@ -20,6 +20,7 @@
 }
 
 .rating {
+  padding: 0;
   font-size: var(--font-size-md);
   border: none;
 }
