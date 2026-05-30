@@ -1,8 +1,9 @@
+import type { FC } from "react";
 import styles from "./Navigation.module.css";
 
 const navigationItems = ["Фильмы", "Сериалы", "Подборки"];
 
-const Navigation = () => {
+const Navigation: FC = () => {
   return (
     <nav className={styles.navigation}>
       <ul className={styles.list}>

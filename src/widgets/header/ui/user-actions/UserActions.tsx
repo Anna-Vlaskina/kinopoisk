@@ -3,14 +3,10 @@ import SearchIcon from "@/shared/assets/icons/search.svg?react";
 import BellIcon from "@/shared/assets/icons/bell.svg?react";
 import ProfileIcon from "@/shared/assets/icons/profile.svg?react";
 import Button from "@/shared/ui/button";
+import type { FC } from "react";
+import type { UserActionsProps } from "./type";
 
-interface UserActionsProps {
-  isAuth: boolean;
-  onLogout: () => void;
-  onLogin: () => void;
-}
-
-const UserActions = ({ isAuth, onLogin, onLogout }: UserActionsProps) => {
+const UserActions: FC<UserActionsProps> = ({ isAuth, onLogin, onLogout }: UserActionsProps) => {
   return (
     <div className={styles.container}>
       <Button variant="only-icon">

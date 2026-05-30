@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, type FC } from "react";
 import UserActions from "../user-actions";
 import Logo from "@/shared/ui/logo";
 import Navigation from "../navigation";
 import styles from "./Header.module.css";
 
-const Header = () => {
+const Header: FC = () => {
   const [isAuth, setIsAuth] = useState(false);
   return (
     <header className={styles.header}>
