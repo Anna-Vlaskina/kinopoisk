@@ -1,6 +1,5 @@
 import Header from "@/widgets/header";
-import HeroSection from "@/widgets/hero-section";
-import MovieCollectionCard from "@/widgets/movie-card/movie-collection-card";
+import MoviePremiereCard from "@/widgets/movie-card/movie-premiere-card";
 
 function App() {
   return (
@@ -17,13 +16,7 @@ function App() {
       }}
     >
       <Header></Header>
-      <HeroSection></HeroSection>
-      <MovieCollectionCard
-        title="Спасатели Малибу"
-        rating={5.6}
-        type="Фильм"
-        genre="Комедия, боевик"
-      ></MovieCollectionCard>
+      <MoviePremiereCard title="Спасатели Малибу" premiereDate="12 декабря"></MoviePremiereCard>
     </div>
   );
 }
