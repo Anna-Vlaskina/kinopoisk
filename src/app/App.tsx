@@ -1,6 +1,6 @@
 import { mockMovies } from "@/shared/mocks/mockMovies";
 import Header from "@/widgets/header";
-import PremieresCarousel from "@/widgets/premieres-carousel/PremieresCarousel";
+import MovieRow from "@/widgets/movie-row";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       }}
     >
       <Header></Header>
-      <PremieresCarousel movies={mockMovies}></PremieresCarousel>
+      <MovieRow movies={mockMovies}></MovieRow>
     </div>
   );
 }

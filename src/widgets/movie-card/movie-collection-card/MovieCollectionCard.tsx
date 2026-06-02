@@ -5,16 +5,14 @@ import MovieTitle from "@/entities/movie/ui/movie-title";
 import styles from "./MovieCollectionCard.module.css";
 import type { MovieCollectionCardProps } from "./type";
 
-const MovieCollectionCard: FC<MovieCollectionCardProps> = (props) => {
-  const { title, posterUrl, rating, type, genre } = props;
-
+const MovieCollectionCard: FC<MovieCollectionCardProps> = ({ movie }) => {
   return (
     <article className={styles.card}>
-      <MoviePoster src={posterUrl} alt={title} variant="horizontal" />
+      <MoviePoster src={movie.posterUrl} alt={movie.title} variant="horizontal" />
 
-      <MovieMeta rating={rating} type={type} genre={genre} />
+      <MovieMeta rating={movie.rating} type={movie.type} genre={movie.genre} />
 
-      <MovieTitle title={title} />
+      <MovieTitle title={movie.title} />
     </article>
   );
 };

@@ -1,0 +1,23 @@
+.root {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.prev,
+.next {
+  padding: 12px;
+  font-size: 32px;
+  color: rgb(207 208 217 / 50%);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}

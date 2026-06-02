@@ -1,4 +1,4 @@
-import type { Movie } from "@/widgets/premieres-carousel/PremieresCarousel";
+import type { Movie } from "@/shared/mocks/type";
 
 export interface MoviePremiereCardProps {
   movie: Movie;
