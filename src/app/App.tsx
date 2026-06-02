@@ -1,5 +1,6 @@
+import { mockMovies } from "@/shared/mocks/mockMovies";
 import Header from "@/widgets/header";
-import MoviePremiereCard from "@/widgets/movie-card/movie-premiere-card";
+import PremieresCarousel from "@/widgets/premieres-carousel/PremieresCarousel";
 
 function App() {
   return (
@@ -10,13 +11,14 @@ function App() {
         gap: "50px",
         backgroundColor: "var(--color-background)",
         fontFamily: "var(--font-family-main)",
-        width: "100vw",
+        width: "100%",
         height: "100vh",
         padding: "30px 100px",
+        boxSizing: "border-box",
       }}
     >
       <Header></Header>
-      <MoviePremiereCard title="Спасатели Малибу" premiereDate="12 декабря"></MoviePremiereCard>
+      <PremieresCarousel movies={mockMovies}></PremieresCarousel>
     </div>
   );
 }

@@ -1,6 +1,5 @@
+import type { Movie } from "@/widgets/premieres-carousel/PremieresCarousel";
+
 export interface MoviePremiereCardProps {
-  title: string;
-  posterUrl?: string;
-  season?: string;
-  premiereDate?: string;
+  movie: Movie;
 }

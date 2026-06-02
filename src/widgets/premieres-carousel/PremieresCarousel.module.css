@@ -1,0 +1,44 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 560px;
+}
+
+.slide {
+  position: absolute;
+}
+
+.active {
+  z-index: 3;
+}
+
+.second {
+  z-index: 2;
+  filter: blur(4px);
+  transform: translateX(300px) scale(0.8);
+}
+
+.third {
+  z-index: 1;
+  filter: blur(8px);
+  transform: translateX(500px) scale(0.6);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.prev,
+.next {
+  padding: 20px;
+  font-size: xx-large;
+  color: rgb(207 208 217 / 50%);
+  cursor: pointer;
+  background-color: transparent;
+}

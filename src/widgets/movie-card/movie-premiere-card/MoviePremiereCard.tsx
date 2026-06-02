@@ -6,17 +6,17 @@ import Badge from "@/shared/ui/badge";
 import styles from "./MoviePremiereCard.module.css";
 
 const MoviePremiereCard: FC<MoviePremiereCardProps> = (props) => {
-  const { title, posterUrl, season, premiereDate } = props;
+  const { movie } = props;
 
   return (
     <article className={styles.card}>
-      <MoviePoster src={posterUrl} alt={title} variant="vertical" />
+      <MoviePoster src={movie.posterUrl} alt={movie.title} variant="vertical" />
 
-      <MovieTitle title={season ? `${title}, ${season}` : title} />
+      <MovieTitle title={movie.season ? `${movie.title}, ${movie.season}` : movie.title} />
 
       <div className={styles.premier}>
         <Badge variant="default">Премьера</Badge>
-        <Badge variant="text">{premiereDate}</Badge>
+        <Badge variant="text">{movie.premiereDate}</Badge>
       </div>
     </article>
   );
