@@ -1,6 +1,6 @@
-import { mockMovies } from "@/shared/mocks/mockMovies";
+import { mockSections } from "@/shared/mocks/mockSection";
 import Header from "@/widgets/header";
-import MovieRow from "@/widgets/movie-row";
+import MoviesCatalog from "@/widgets/movies-catalog";
 
 function App() {
   return (
@@ -12,13 +12,13 @@ function App() {
         backgroundColor: "var(--color-background)",
         fontFamily: "var(--font-family-main)",
         width: "100%",
-        height: "100vh",
+        height: "100%",
         padding: "30px 100px",
         boxSizing: "border-box",
       }}
     >
       <Header></Header>
-      <MovieRow movies={mockMovies}></MovieRow>
+      <MoviesCatalog sections={mockSections}></MoviesCatalog>
     </div>
   );
 }

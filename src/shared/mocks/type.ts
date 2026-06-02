@@ -8,3 +8,8 @@ export interface Movie {
   season?: number;
   premiereDate: string;
 }
+
+export type MovieSection = {
+  title: string;
+  movies: Movie[];
+};
