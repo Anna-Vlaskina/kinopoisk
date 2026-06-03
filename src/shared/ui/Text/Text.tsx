@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import type { FC } from "react";
-import type { TextProps } from "./type";
+import type { TextProps } from "./Text.types";
 import styles from "./Text.module.css";
 
-const Text: FC<TextProps> = (props) => {
+export const Text: FC<TextProps> = (props) => {
   const {
     tag: Tag = "p",
     size = "sm",
@@ -49,5 +49,3 @@ const Text: FC<TextProps> = (props) => {
     </Tag>
   );
 };
-
-export default Text;

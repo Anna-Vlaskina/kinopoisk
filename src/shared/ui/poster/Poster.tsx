@@ -1,8 +1,8 @@
-import type { PosterProps } from "./type";
+import type { PosterProps } from "./Poster.types";
 import type { FC } from "react";
 import styles from "./Poster.module.css";
 
-const Poster: FC<PosterProps> = (props) => {
+export const Poster: FC<PosterProps> = (props) => {
   const { src, alt, variant = "horizontal", children } = props;
 
   return (
@@ -13,5 +13,3 @@ const Poster: FC<PosterProps> = (props) => {
     </div>
   );
 };
-
-export default Poster;

@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import styles from "./logo.module.css";
 
-const Logo: FC = () => {
+export const Logo: FC = () => {
   return (
     <div className={styles.logo}>
       <span className={styles.primary}>КИНО</span>
@@ -9,5 +9,3 @@ const Logo: FC = () => {
     </div>
   );
 };
-
-export default Logo;

@@ -3,7 +3,7 @@ import styles from "./HeaderNavigation.module.css";
 
 const headerNavigationItems = ["Фильмы", "Сериалы", "Подборки"];
 
-const HeaderNavigation: FC = () => {
+export const HeaderNavigation: FC = () => {
   return (
     <nav className={styles.navigation}>
       <ul className={styles.list}>
@@ -16,5 +16,3 @@ const HeaderNavigation: FC = () => {
     </nav>
   );
 };
-
-export default HeaderNavigation;

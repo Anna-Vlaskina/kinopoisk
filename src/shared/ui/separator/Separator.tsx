@@ -5,12 +5,10 @@ interface SeparatorProps {
   variant?: "primary" | "secondary";
 }
 
-const Separator: FC<SeparatorProps> = ({ variant = "secondary" }) => {
+export const Separator: FC<SeparatorProps> = ({ variant = "secondary" }) => {
   return (
     <div className={styles.separator}>
       <span className={styles[variant]}>•</span>
     </div>
   );
 };
-
-export default Separator;

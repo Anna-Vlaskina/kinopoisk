@@ -2,11 +2,15 @@ import styles from "./UserActions.module.css";
 import SearchIcon from "@/shared/assets/icons/search.svg?react";
 import BellIcon from "@/shared/assets/icons/bell.svg?react";
 import ProfileIcon from "@/shared/assets/icons/profile.svg?react";
-import Button from "@/shared/ui/button";
+import { Button } from "@/shared/ui/button";
 import type { FC } from "react";
-import type { UserActionsProps } from "./type";
+import type { UserActionsProps } from "./UserActions.types";
 
-const UserActions: FC<UserActionsProps> = ({ isAuth, onLogin, onLogout }: UserActionsProps) => {
+export const UserActions: FC<UserActionsProps> = ({
+  isAuth,
+  onLogin,
+  onLogout,
+}: UserActionsProps) => {
   return (
     <div className={styles.container}>
       <Button variant="only-icon">
@@ -34,5 +38,3 @@ const UserActions: FC<UserActionsProps> = ({ isAuth, onLogin, onLogout }: UserAc
     </div>
   );
 };
-
-export default UserActions;

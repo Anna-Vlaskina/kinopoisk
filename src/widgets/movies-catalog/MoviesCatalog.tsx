@@ -1,14 +1,14 @@
 import type { MovieSection } from "@/shared/mocks/type";
-import MovieRow from "@/widgets/movie-row/MovieRow";
+import { MovieRow } from "@/widgets/movie-row/MovieRow";
 import styles from "./MoviesCatalog.module.css";
-import Text from "@/shared/ui/text";
+import { Text } from "@/shared/ui/text";
 import type { FC } from "react";
 
 type Props = {
   sections: MovieSection[];
 };
 
-const MoviesCatalog: FC<Props> = ({ sections }) => {
+export const MoviesCatalog: FC<Props> = ({ sections }) => {
   return (
     <div className={styles.root}>
       <Text tag="h2" size="2xl" weight="bold">
@@ -26,5 +26,3 @@ const MoviesCatalog: FC<Props> = ({ sections }) => {
     </div>
   );
 };
-
-export default MoviesCatalog;

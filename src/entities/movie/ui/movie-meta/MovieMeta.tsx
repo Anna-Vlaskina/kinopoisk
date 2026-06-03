@@ -1,11 +1,11 @@
 import type { FC } from "react";
-import Badge from "@/shared/ui/badge";
-import Text from "@/shared/ui/text";
-import Separator from "@/shared/ui/separator";
+import { Badge } from "@/shared/ui/badge";
+import { Text } from "@/shared/ui/text";
+import { Separator } from "@/shared/ui/separator";
 import styles from "./MovieMeta.module.css";
-import type { MovieMetaProps } from "./type";
+import type { MovieMetaProps } from "./MovieMeta.types";
 
-const MovieMeta: FC<MovieMetaProps> = (props) => {
+export const MovieMeta: FC<MovieMetaProps> = (props) => {
   const { rating, type, genre } = props;
 
   return (
@@ -34,5 +34,3 @@ const MovieMeta: FC<MovieMetaProps> = (props) => {
     </div>
   );
 };
-
-export default MovieMeta;

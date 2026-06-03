@@ -1,1 +1,1 @@
-export { default } from "./MoviesCatalog";
+export { MoviesCatalog } from "./MoviesCatalog";

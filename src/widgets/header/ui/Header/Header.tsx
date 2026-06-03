@@ -1,10 +1,10 @@
 import { useState, type FC } from "react";
-import UserActions from "../user-actions";
-import Logo from "@/shared/ui/logo";
-import HeaderNavigation from "../navigation";
+import { UserActions } from "../user-actions";
+import { Logo } from "@/shared/ui/logo";
+import { HeaderNavigation } from "../navigation";
 import styles from "./Header.module.css";
 
-const Header: FC = () => {
+export const Header: FC = () => {
   const [isAuth, setIsAuth] = useState(false);
   return (
     <header className={styles.header}>
@@ -18,5 +18,3 @@ const Header: FC = () => {
     </header>
   );
 };
-
-export default Header;

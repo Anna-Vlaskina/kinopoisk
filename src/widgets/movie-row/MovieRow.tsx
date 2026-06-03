@@ -1,5 +1,5 @@
 import { useState, type FC } from "react";
-import MovieCollectionCard from "../movie-card/movie-collection-card";
+import { MovieCollectionCard } from "../movie-card/movie-collection-card";
 import styles from "./MovieRow.module.css";
 import type { Movie } from "@/shared/mocks/type";
 
@@ -9,7 +9,7 @@ type MovieProps = {
 
 const VISIBLE_COUNT = 4;
 
-const MovieRow: FC<MovieProps> = ({ movies }) => {
+export const MovieRow: FC<MovieProps> = ({ movies }) => {
   const [startIndex, setStartIndex] = useState(0);
 
   const prev = () => {
@@ -42,5 +42,3 @@ const MovieRow: FC<MovieProps> = ({ movies }) => {
     </div>
   );
 };
-
-export default MovieRow;

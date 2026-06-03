@@ -1,1 +1,1 @@
-export { default } from "./MovieMeta";
+export { MovieMeta } from "./MovieMeta";

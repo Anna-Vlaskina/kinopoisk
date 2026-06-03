@@ -1,11 +1,11 @@
 import type { FC } from "react";
-import type { MoviePremiereCardProps } from "./type";
-import MoviePoster from "@/entities/movie/ui/movie-poster";
-import MovieTitle from "@/entities/movie/ui/movie-title";
-import Badge from "@/shared/ui/badge";
+import type { MoviePremiereCardProps } from "./MoviePremiereCard.types";
+import { MoviePoster } from "@/entities/movie/ui/movie-poster";
+import { MovieTitle } from "@/entities/movie/ui/movie-title";
+import { Badge } from "@/shared/ui/badge";
 import styles from "./MoviePremiereCard.module.css";
 
-const MoviePremiereCard: FC<MoviePremiereCardProps> = (props) => {
+export const MoviePremiereCard: FC<MoviePremiereCardProps> = (props) => {
   const { movie } = props;
 
   return (
@@ -21,5 +21,3 @@ const MoviePremiereCard: FC<MoviePremiereCardProps> = (props) => {
     </article>
   );
 };
-
-export default MoviePremiereCard;

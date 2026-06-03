@@ -1,5 +1,5 @@
 import { useState, type FC } from "react";
-import MoviePremiereCard from "../movie-card/movie-premiere-card";
+import { MoviePremiereCard } from "../movie-card/movie-premiere-card";
 import styles from "./PremieresCarousel.module.css";
 import type { Movie } from "@/shared/mocks/type";
 
@@ -7,7 +7,7 @@ type MovieProps = {
   movies: Movie[];
 };
 
-const PremieresCarousel: FC<MovieProps> = ({ movies }) => {
+export const PremieresCarousel: FC<MovieProps> = ({ movies }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const prev = () => {
@@ -51,5 +51,3 @@ const PremieresCarousel: FC<MovieProps> = ({ movies }) => {
     </div>
   );
 };
-
-export default PremieresCarousel;

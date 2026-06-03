@@ -1,9 +1,9 @@
 import styles from "./HeroSection.module.css";
-import Text from "@/shared/ui/text";
-import Button from "@/shared/ui/button";
+import { Text } from "@/shared/ui/text";
+import { Button } from "@/shared/ui/button";
 import type { FC } from "react";
 
-const HeroSection: FC = () => {
+export const HeroSection: FC = () => {
   return (
     <section className={styles.section}>
       <Text tag="h1" size="3xl" weight="extrabold" lineHeight="normal">
@@ -19,5 +19,3 @@ const HeroSection: FC = () => {
     </section>
   );
 };
-
-export default HeroSection;

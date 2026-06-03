@@ -1,5 +1,5 @@
 import React from "react";
-import type { PosterProps } from "@/shared/ui/poster/type";
+import type { PosterProps } from "@/shared/ui/poster/Poster.types";
 
 export interface MoviePosterProps {
   src?: string;

@@ -1,10 +1,10 @@
 import type { FC } from "react";
 import styles from "./Footer.module.css";
-import Logo from "@/shared/ui/logo";
-import FooterNavigation from "../navigation";
-import Text from "@/shared/ui/text";
+import { Logo } from "@/shared/ui/logo";
+import { FooterNavigation } from "../navigation";
+import { Text } from "@/shared/ui/text";
 
-const Footer: FC = () => {
+export const Footer: FC = () => {
   return (
     <>
       <div className={styles.footer}>
@@ -17,5 +17,3 @@ const Footer: FC = () => {
     </>
   );
 };
-
-export default Footer;

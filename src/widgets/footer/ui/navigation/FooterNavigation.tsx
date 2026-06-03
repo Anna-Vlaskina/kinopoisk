@@ -1,9 +1,9 @@
 import type { FC } from "react";
 import { footerSections } from "../../model/footerSections";
-import Text from "@/shared/ui/text/Text";
+import { Text } from "@/shared/ui/text/Text";
 import styles from "./FooterNavigation.module.css";
 
-const FooterNavigation: FC = () => {
+export const FooterNavigation: FC = () => {
   return (
     <nav className={styles.navigation}>
       {footerSections.map((section) => (
@@ -51,5 +51,3 @@ const FooterNavigation: FC = () => {
     </nav>
   );
 };
-
-export default FooterNavigation;

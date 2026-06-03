@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import type { ButtonProps } from "./type";
+import type { ButtonProps } from "./Button.types";
 import styles from "./Button.module.css";
 
-const Button: FC<ButtonProps> = (props) => {
+export const Button: FC<ButtonProps> = (props) => {
   const {
     variant = "filled",
     children,
@@ -27,5 +27,3 @@ const Button: FC<ButtonProps> = (props) => {
     </button>
   );
 };
-
-export default Button;

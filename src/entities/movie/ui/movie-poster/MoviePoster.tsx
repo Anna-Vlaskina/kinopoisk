@@ -1,11 +1,11 @@
 import type { FC } from "react";
-import Poster from "@/shared/ui/poster";
-import type { MoviePosterProps } from "./type";
+import { Poster } from "@/shared/ui/poster";
+import type { MoviePosterProps } from "./MoviePoster.types";
 import fallbackPoster from "@/shared/assets/images/movie-placeholder.png";
 
 const FALLBACK_POSTER = fallbackPoster;
 
-const MoviePoster: FC<MoviePosterProps> = (props) => {
+export const MoviePoster: FC<MoviePosterProps> = (props) => {
   const { src, alt, variant = "vertical", children } = props;
 
   return (
@@ -14,5 +14,3 @@ const MoviePoster: FC<MoviePosterProps> = (props) => {
     </Poster>
   );
 };
-
-export default MoviePoster;
