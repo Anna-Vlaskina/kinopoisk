@@ -1,6 +1,6 @@
 import React from "react";
 
-type TagVariant = "p" | "span" | "div" | "label" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+type TagVariant = "p" | "span" | "div" | "label" | "li" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 type FontSize =
   | "xs" // 12px

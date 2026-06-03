@@ -1,4 +1,5 @@
 import Header from "@/widgets/header";
+import Footer from "@/widgets/footer";
 import HeroSection from "@/widgets/hero-section";
 import PremieresCarousel from "@/widgets/premieres-carousel";
 import MoviesCatalog from "@/widgets/movies-catalog";
@@ -18,6 +19,7 @@ const HomePage: FC = () => {
         </section>
         <MoviesCatalog sections={mockSections}></MoviesCatalog>
       </main>
+      <Footer></Footer>
     </div>
   );
 };

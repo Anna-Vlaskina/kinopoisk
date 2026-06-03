@@ -1,7 +1,7 @@
 import { useState, type FC } from "react";
 import UserActions from "../user-actions";
 import Logo from "@/shared/ui/logo";
-import Navigation from "../navigation";
+import HeaderNavigation from "../navigation";
 import styles from "./Header.module.css";
 
 const Header: FC = () => {
@@ -9,7 +9,7 @@ const Header: FC = () => {
   return (
     <header className={styles.header}>
       <Logo />
-      <Navigation></Navigation>
+      <HeaderNavigation></HeaderNavigation>
       <UserActions
         isAuth={isAuth}
         onLogin={() => setIsAuth(true)}

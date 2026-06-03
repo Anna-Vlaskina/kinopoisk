@@ -1,13 +1,13 @@
 import type { FC } from "react";
-import styles from "./Navigation.module.css";
+import styles from "./HeaderNavigation.module.css";
 
-const navigationItems = ["Фильмы", "Сериалы", "Подборки"];
+const headerNavigationItems = ["Фильмы", "Сериалы", "Подборки"];
 
-const Navigation: FC = () => {
+const HeaderNavigation: FC = () => {
   return (
     <nav className={styles.navigation}>
       <ul className={styles.list}>
-        {navigationItems.map((item) => (
+        {headerNavigationItems.map((item) => (
           <li key={item}>
             <button className={styles.link}>{item}</button>
           </li>
@@ -17,4 +17,4 @@ const Navigation: FC = () => {
   );
 };
 
-export default Navigation;
+export default HeaderNavigation;
