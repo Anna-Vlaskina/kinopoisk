@@ -7,7 +7,11 @@ export const Poster: FC<PosterProps> = (props) => {
 
   return (
     <div className={`${styles.poster} ${styles[variant]}`}>
-      <img src={src} alt={alt} className={styles.image} />
+      <img
+        src={src}
+        alt={alt}
+        className={styles.image}
+      />
 
       {children}
     </div>

@@ -10,7 +10,11 @@ export const MoviePremiereCard: FC<MoviePremiereCardProps> = (props) => {
 
   return (
     <article className={styles.card}>
-      <MoviePoster src={movie.posterUrl} alt={movie.title} variant="vertical" />
+      <MoviePoster
+        src={movie.posterUrl}
+        alt={movie.title}
+        variant="vertical"
+      />
 
       <MovieTitle title={movie.season ? `${movie.title}, ${movie.season}` : movie.title} />
 

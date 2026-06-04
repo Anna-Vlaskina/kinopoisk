@@ -11,7 +11,12 @@ export const Footer: FC = () => {
         <Logo></Logo>
         <FooterNavigation></FooterNavigation>
       </div>
-      <Text tag="span" size="md" weight="regular" color="disabled">
+      <Text
+        tag="span"
+        size="md"
+        weight="regular"
+        color="disabled"
+      >
         © КиноДом 2020
       </Text>
     </>

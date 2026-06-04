@@ -8,9 +8,17 @@ import type { MovieCollectionCardProps } from "./MovieCollectionCard.types";
 export const MovieCollectionCard: FC<MovieCollectionCardProps> = ({ movie }) => {
   return (
     <article className={styles.card}>
-      <MoviePoster src={movie.posterUrl} alt={movie.title} variant="horizontal" />
+      <MoviePoster
+        src={movie.posterUrl}
+        alt={movie.title}
+        variant="horizontal"
+      />
 
-      <MovieMeta rating={movie.rating} type={movie.type} genre={movie.genre} />
+      <MovieMeta
+        rating={movie.rating}
+        type={movie.type}
+        genre={movie.genre}
+      />
 
       <MovieTitle title={movie.title} />
     </article>

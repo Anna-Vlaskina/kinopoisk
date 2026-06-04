@@ -8,7 +8,7 @@
   --color-white-tertiary: rgb(var(--color-white) / 35%);
   --color-white-disabled: rgb(var(--color-white) / 20%);
   --color-white-lightest: rgb(var(--color-white) / 15%);
-  
+
   /* Акцентный цвет */
   --color-accent: rgb(237 10 50 / 100%);
 

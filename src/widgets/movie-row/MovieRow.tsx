@@ -26,17 +26,26 @@ export const MovieRow: FC<MovieProps> = ({ movies }) => {
 
   return (
     <div className={styles.root}>
-      <button className={styles.prev} onClick={prev}>
+      <button
+        className={styles.prev}
+        onClick={prev}
+      >
         ←
       </button>
 
       <div className={styles.container}>
         {visibleMovies.map((movie) => (
-          <MovieCollectionCard key={movie.id} movie={movie} />
+          <MovieCollectionCard
+            key={movie.id}
+            movie={movie}
+          />
         ))}
       </div>
 
-      <button className={styles.next} onClick={next}>
+      <button
+        className={styles.next}
+        onClick={next}
+      >
         →
       </button>
     </div>

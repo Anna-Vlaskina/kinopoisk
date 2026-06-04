@@ -23,7 +23,10 @@ export const UserActions: FC<UserActionsProps> = ({
       </Button>
 
       {isAuth ? (
-        <Button variant="only-icon" onClick={onLogout}>
+        <Button
+          variant="only-icon"
+          onClick={onLogout}
+        >
           <img
             className={styles.image}
             src="https://static.vecteezy.com/system/resources/previews/019/896/012/non_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
@@ -31,7 +34,10 @@ export const UserActions: FC<UserActionsProps> = ({
           />
         </Button>
       ) : (
-        <Button variant="only-icon" onClick={onLogin}>
+        <Button
+          variant="only-icon"
+          onClick={onLogin}
+        >
           <ProfileIcon />
         </Button>
       )}

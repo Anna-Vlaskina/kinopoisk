@@ -9,7 +9,11 @@ export const MoviePoster: FC<MoviePosterProps> = (props) => {
   const { src, alt, variant = "vertical", children } = props;
 
   return (
-    <Poster src={src || FALLBACK_POSTER} alt={alt} variant={variant}>
+    <Poster
+      src={src || FALLBACK_POSTER}
+      alt={alt}
+      variant={variant}
+    >
       {children}
     </Poster>
   );

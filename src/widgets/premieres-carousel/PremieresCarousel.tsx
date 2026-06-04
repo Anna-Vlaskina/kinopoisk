@@ -33,19 +33,28 @@ export const PremieresCarousel: FC<MovieProps> = ({ movies }) => {
 
   return (
     <div className={styles.root}>
-      <button className={styles.prev} onClick={prev}>
+      <button
+        className={styles.prev}
+        onClick={prev}
+      >
         ←
       </button>
 
       <div className={styles.container}>
         {movies.map((movie, index) => (
-          <div key={movie.id} className={`${styles.slide} ${styles[getPosition(index)]}`}>
+          <div
+            key={movie.id}
+            className={`${styles.slide} ${styles[getPosition(index)]}`}
+          >
             <MoviePremiereCard movie={movie} />
           </div>
         ))}
       </div>
 
-      <button className={styles.next} onClick={next}>
+      <button
+        className={styles.next}
+        onClick={next}
+      >
         →
       </button>
     </div>

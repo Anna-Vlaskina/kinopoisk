@@ -16,7 +16,11 @@ export const MovieMeta: FC<MovieMetaProps> = (props) => {
         <>
           <Separator />
 
-          <Text tag="span" size="md" color="secondary">
+          <Text
+            tag="span"
+            size="md"
+            color="secondary"
+          >
             {type}
           </Text>
         </>
@@ -26,7 +30,11 @@ export const MovieMeta: FC<MovieMetaProps> = (props) => {
         <>
           <Separator />
 
-          <Text tag="span" size="md" color="secondary">
+          <Text
+            tag="span"
+            size="md"
+            color="secondary"
+          >
             {genre}
           </Text>
         </>

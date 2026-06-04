@@ -7,15 +7,28 @@ export const FooterNavigation: FC = () => {
   return (
     <nav className={styles.navigation}>
       {footerSections.map((section) => (
-        <div key={section.title} className={styles.section}>
-          <Text tag="h4" size="md" weight="semibold">
+        <div
+          key={section.title}
+          className={styles.section}
+        >
+          <Text
+            tag="h4"
+            size="md"
+            weight="semibold"
+          >
             {section.title}
           </Text>
 
           <ul className={section.type === "social" ? styles.social : styles.links}>
             {section.type === "text" &&
               section.links.map((link) => (
-                <Text tag="li" size="md" weight="medium" color="tertiary" key={link}>
+                <Text
+                  tag="li"
+                  size="md"
+                  weight="medium"
+                  color="tertiary"
+                  key={link}
+                >
                   {link}
                 </Text>
               ))}
@@ -25,10 +38,18 @@ export const FooterNavigation: FC = () => {
                 const Icon = item.icon;
 
                 return (
-                  <li key={item.id} className={styles.contact}>
+                  <li
+                    key={item.id}
+                    className={styles.contact}
+                  >
                     <Icon className={styles.icon} />
 
-                    <Text tag="span" size="md" weight="medium" color="tertiary">
+                    <Text
+                      tag="span"
+                      size="md"
+                      weight="medium"
+                      color="tertiary"
+                    >
                       {item.text}
                     </Text>
                   </li>
@@ -40,7 +61,10 @@ export const FooterNavigation: FC = () => {
                 const Icon = item.icon;
 
                 return (
-                  <li key={item.id} className={styles.social}>
+                  <li
+                    key={item.id}
+                    className={styles.social}
+                  >
                     <Icon className={styles.icon} />
                   </li>
                 );
