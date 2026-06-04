@@ -3,11 +3,12 @@ import { UserActions } from "../user-actions";
 import { Logo } from "@/shared/ui/logo";
 import { HeaderNavigation } from "../navigation";
 import styles from "./Header.module.css";
+import clsx from "clsx";
 
 export const Header: FC = () => {
   const [isAuth, setIsAuth] = useState(false);
   return (
-    <header className={styles.header}>
+    <header className={clsx(styles.header)}>
       <Logo />
       <HeaderNavigation></HeaderNavigation>
       <UserActions

@@ -4,10 +4,11 @@ import { MoviePoster } from "@/entities/movie/ui/movie-poster";
 import { MovieTitle } from "@/entities/movie/ui/movie-title";
 import styles from "./MovieCollectionCard.module.css";
 import type { MovieCollectionCardProps } from "./MovieCollectionCard.types";
+import clsx from "clsx";
 
 export const MovieCollectionCard: FC<MovieCollectionCardProps> = ({ movie }) => {
   return (
-    <article className={styles.card}>
+    <article className={clsx(styles.card)}>
       <MoviePoster
         src={movie.posterUrl}
         alt={movie.title}

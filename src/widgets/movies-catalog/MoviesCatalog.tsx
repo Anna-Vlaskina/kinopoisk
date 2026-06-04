@@ -3,6 +3,7 @@ import { MovieRow } from "@/widgets/movie-row/MovieRow";
 import styles from "./MoviesCatalog.module.css";
 import { Text } from "@/shared/ui/text";
 import type { FC } from "react";
+import clsx from "clsx";
 
 type Props = {
   sections: MovieSection[];
@@ -10,7 +11,7 @@ type Props = {
 
 export const MoviesCatalog: FC<Props> = ({ sections }) => {
   return (
-    <div className={styles.root}>
+    <div className={clsx(styles.root)}>
       <Text
         tag="h2"
         size="2xl"
@@ -21,7 +22,7 @@ export const MoviesCatalog: FC<Props> = ({ sections }) => {
       {sections.map((section) => (
         <section
           key={section.title}
-          className={styles.section}
+          className={clsx(styles.section)}
         >
           <Text
             tag="h3"

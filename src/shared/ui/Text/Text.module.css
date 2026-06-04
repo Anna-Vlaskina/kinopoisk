@@ -106,7 +106,9 @@
 }
 
 .truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  -webkit-line-clamp: var(--text-max-lines, 1);
+  line-clamp: var(--text-max-lines, 1);
 }

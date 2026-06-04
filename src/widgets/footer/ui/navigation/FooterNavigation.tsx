@@ -2,14 +2,15 @@ import type { FC } from "react";
 import { footerSections } from "../../model/footerSections";
 import { Text } from "@/shared/ui/text/Text";
 import styles from "./FooterNavigation.module.css";
+import clsx from "clsx";
 
 export const FooterNavigation: FC = () => {
   return (
-    <nav className={styles.navigation}>
+    <nav className={clsx(styles.navigation)}>
       {footerSections.map((section) => (
         <div
           key={section.title}
-          className={styles.section}
+          className={clsx(styles.section)}
         >
           <Text
             tag="h4"
@@ -19,7 +20,7 @@ export const FooterNavigation: FC = () => {
             {section.title}
           </Text>
 
-          <ul className={section.type === "social" ? styles.social : styles.links}>
+          <ul className={clsx(styles.links, section.type === "social" && styles.social)}>
             {section.type === "text" &&
               section.links.map((link) => (
                 <Text
@@ -40,9 +41,9 @@ export const FooterNavigation: FC = () => {
                 return (
                   <li
                     key={item.id}
-                    className={styles.contact}
+                    className={clsx(styles.contact)}
                   >
-                    <Icon className={styles.icon} />
+                    <Icon className={clsx(styles.icon)} />
 
                     <Text
                       tag="span"
@@ -63,9 +64,9 @@ export const FooterNavigation: FC = () => {
                 return (
                   <li
                     key={item.id}
-                    className={styles.social}
+                    className={clsx(styles.social)}
                   >
-                    <Icon className={styles.icon} />
+                    <Icon className={clsx(styles.icon)} />
                   </li>
                 );
               })}

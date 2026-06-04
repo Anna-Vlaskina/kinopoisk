@@ -4,12 +4,13 @@ import { MoviePoster } from "@/entities/movie/ui/movie-poster";
 import { MovieTitle } from "@/entities/movie/ui/movie-title";
 import { Badge } from "@/shared/ui/badge";
 import styles from "./MoviePremiereCard.module.css";
+import clsx from "clsx";
 
 export const MoviePremiereCard: FC<MoviePremiereCardProps> = (props) => {
   const { movie } = props;
 
   return (
-    <article className={styles.card}>
+    <article className={clsx(styles.card)}>
       <MoviePoster
         src={movie.posterUrl}
         alt={movie.title}
@@ -18,7 +19,7 @@ export const MoviePremiereCard: FC<MoviePremiereCardProps> = (props) => {
 
       <MovieTitle title={movie.season ? `${movie.title}, ${movie.season}` : movie.title} />
 
-      <div className={styles.premier}>
+      <div className={clsx(styles.premier)}>
         <Badge variant="default">Премьера</Badge>
         <Badge variant="text">{movie.premiereDate}</Badge>
       </div>

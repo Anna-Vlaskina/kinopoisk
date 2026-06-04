@@ -2,10 +2,11 @@ import styles from "./HeroSection.module.css";
 import { Text } from "@/shared/ui/text";
 import { Button } from "@/shared/ui/button";
 import type { FC } from "react";
+import clsx from "clsx";
 
 export const HeroSection: FC = () => {
   return (
-    <section className={styles.section}>
+    <section className={clsx(styles.section)}>
       <Text
         tag="h1"
         size="3xl"

@@ -1,15 +1,16 @@
 import type { FC } from "react";
 import styles from "./HeaderNavigation.module.css";
+import clsx from "clsx";
 
 const headerNavigationItems = ["Фильмы", "Сериалы", "Подборки"];
 
 export const HeaderNavigation: FC = () => {
   return (
-    <nav className={styles.navigation}>
-      <ul className={styles.list}>
+    <nav className={clsx(styles.navigation)}>
+      <ul className={clsx(styles.list)}>
         {headerNavigationItems.map((item) => (
           <li key={item}>
-            <button className={styles.link}>{item}</button>
+            <button className={clsx(styles.link)}>{item}</button>
           </li>
         ))}
       </ul>

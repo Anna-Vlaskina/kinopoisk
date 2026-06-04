@@ -2,6 +2,7 @@ import { useState, type FC } from "react";
 import { MovieCollectionCard } from "../movie-card/movie-collection-card";
 import styles from "./MovieRow.module.css";
 import type { Movie } from "@/shared/mocks/type";
+import clsx from "clsx";
 
 type MovieProps = {
   movies: Movie[];
@@ -25,15 +26,15 @@ export const MovieRow: FC<MovieProps> = ({ movies }) => {
   const visibleMovies = movies.slice(startIndex, startIndex + VISIBLE_COUNT);
 
   return (
-    <div className={styles.root}>
+    <div className={clsx(styles.root)}>
       <button
-        className={styles.prev}
+        className={clsx(styles.prev)}
         onClick={prev}
       >
         ←
       </button>
 
-      <div className={styles.container}>
+      <div className={clsx(styles.container)}>
         {visibleMovies.map((movie) => (
           <MovieCollectionCard
             key={movie.id}
@@ -43,7 +44,7 @@ export const MovieRow: FC<MovieProps> = ({ movies }) => {
       </div>
 
       <button
-        className={styles.next}
+        className={clsx(styles.next)}
         onClick={next}
       >
         →

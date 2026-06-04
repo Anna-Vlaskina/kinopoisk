@@ -2,6 +2,7 @@ import { useState, type FC } from "react";
 import { MoviePremiereCard } from "../movie-card/movie-premiere-card";
 import styles from "./PremieresCarousel.module.css";
 import type { Movie } from "@/shared/mocks/type";
+import clsx from "clsx";
 
 type MovieProps = {
   movies: Movie[];
@@ -32,19 +33,19 @@ export const PremieresCarousel: FC<MovieProps> = ({ movies }) => {
   };
 
   return (
-    <div className={styles.root}>
+    <div className={clsx(styles.root)}>
       <button
-        className={styles.prev}
+        className={clsx(styles.prev)}
         onClick={prev}
       >
         ←
       </button>
 
-      <div className={styles.container}>
+      <div className={clsx(styles.container)}>
         {movies.map((movie, index) => (
           <div
             key={movie.id}
-            className={`${styles.slide} ${styles[getPosition(index)]}`}
+            className={clsx(styles.slide, styles[getPosition(index)])}
           >
             <MoviePremiereCard movie={movie} />
           </div>
@@ -52,7 +53,7 @@ export const PremieresCarousel: FC<MovieProps> = ({ movies }) => {
       </div>
 
       <button
-        className={styles.next}
+        className={clsx(styles.next)}
         onClick={next}
       >
         →

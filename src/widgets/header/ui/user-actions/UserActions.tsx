@@ -5,6 +5,7 @@ import ProfileIcon from "@/shared/assets/icons/profile.svg?react";
 import { Button } from "@/shared/ui/button";
 import type { FC } from "react";
 import type { UserActionsProps } from "./UserActions.types";
+import clsx from "clsx";
 
 export const UserActions: FC<UserActionsProps> = ({
   isAuth,
@@ -12,10 +13,10 @@ export const UserActions: FC<UserActionsProps> = ({
   onLogout,
 }: UserActionsProps) => {
   return (
-    <div className={styles.container}>
+    <div className={clsx(styles.container)}>
       <Button variant="only-icon">
         <SearchIcon />
-        <span className={styles.span}>Поиск</span>
+        <span className={clsx(styles.span)}>Поиск</span>
       </Button>
 
       <Button variant="only-icon">
@@ -28,7 +29,7 @@ export const UserActions: FC<UserActionsProps> = ({
           onClick={onLogout}
         >
           <img
-            className={styles.image}
+            className={clsx(styles.image)}
             src="https://static.vecteezy.com/system/resources/previews/019/896/012/non_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
             alt="Аватар пользователя"
           />

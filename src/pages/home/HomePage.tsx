@@ -7,13 +7,14 @@ import type { FC } from "react";
 import { mockMovies } from "@/shared/mocks/mockMovies";
 import { mockSections } from "@/shared/mocks/mockSection";
 import styles from "./HomePage.module.css";
+import clsx from "clsx";
 
 export const HomePage: FC = () => {
   return (
-    <div className={styles.page}>
+    <div className={clsx(styles.page)}>
       <Header></Header>
-      <main className={styles.catalog}>
-        <section className={styles.hero}>
+      <main className={clsx(styles.catalog)}>
+        <section className={clsx(styles.hero)}>
           <HeroSection></HeroSection>
           <PremieresCarousel movies={mockMovies}></PremieresCarousel>
         </section>
