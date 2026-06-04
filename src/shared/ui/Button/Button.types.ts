@@ -1,12 +1,12 @@
 import React from "react";
 
-type ButtonVariant = "filled" | "outlined";
+type ButtonVariant = "filled" | "outlined" | "only-icon";
 type ButtonHTMLType = "button" | "submit" | "reset";
 
 export interface ButtonProps {
+  variant?: ButtonVariant;
   className?: string;
   children?: React.ReactNode;
-  variant: ButtonVariant;
   type?: ButtonHTMLType;
   onClick?: () => void;
   icon?: React.ReactNode;

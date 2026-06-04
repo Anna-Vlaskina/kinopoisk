@@ -1,24 +1,21 @@
-import { useState } from "react";
-import GuestActions from "../GuestActions";
-import UserActions from "../UserActions";
-import Logo from "../../../../shared/ui/Logo";
-import Navigation from "../Navigation";
+import { useState, type FC } from "react";
+import { UserActions } from "../user-actions";
+import { Logo } from "@/shared/ui/logo";
+import { HeaderNavigation } from "../navigation";
 import styles from "./Header.module.css";
+import clsx from "clsx";
 
-const Header = () => {
+export const Header: FC = () => {
   const [isAuth, setIsAuth] = useState(false);
   return (
-    <header className={styles.header}>
+    <header className={clsx(styles.header)}>
       <Logo />
-      <Navigation></Navigation>
-
-      {isAuth ? (
-        <UserActions onLogout={() => setIsAuth(false)} />
-      ) : (
-        <GuestActions onLogin={() => setIsAuth(true)} />
-      )}
+      <HeaderNavigation></HeaderNavigation>
+      <UserActions
+        isAuth={isAuth}
+        onLogin={() => setIsAuth(true)}
+        onLogout={() => setIsAuth(false)}
+      />
     </header>
   );
 };
-
-export default Header;

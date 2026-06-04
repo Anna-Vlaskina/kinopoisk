@@ -1,0 +1,11 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.premier {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
