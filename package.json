@@ -12,12 +12,14 @@
     "format": "oxfmt --write",
     "lint:css": "stylelint \"src/**/*.{css,scss}\"",
     "lint:css:fix": "stylelint \"src/**/*.{css,scss}\" --fix",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "generate:api": "orval"
   },
   "dependencies": {
     "clsx": "^2.1.1",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "swiper": "^12.2.0"
   },
   "devDependencies": {
     "@types/node": "^24.12.4",
@@ -26,6 +28,7 @@
     "@vitejs/plugin-react": "^6.0.1",
     "lefthook": "^2.1.8",
     "lint-staged": "^16.4.0",
+    "orval": "^7.13.2",
     "oxfmt": "^0.51.0",
     "oxlint": "^1.66.0",
     "postcss-selector-parser": "^7.1.1",

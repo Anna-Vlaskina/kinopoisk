@@ -2,6 +2,7 @@ import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import { HeroSection } from "@/widgets/hero-section";
 import { PremieresCarousel } from "@/widgets/premieres-carousel";
+// import { PremieresCarouselNew } from "@/widgets/premieres-carousel-new";
 import { MoviesCatalog } from "@/widgets/movies-catalog";
 import type { FC } from "react";
 import { mockMovies } from "@/shared/mocks/mockMovies";
@@ -17,6 +18,7 @@ export const HomePage: FC = () => {
         <section className={clsx(styles.hero)}>
           <HeroSection></HeroSection>
           <PremieresCarousel movies={mockMovies}></PremieresCarousel>
+          {/* <PremieresCarouselNew movies={mockMovies}></PremieresCarouselNew> */}
         </section>
         <MoviesCatalog sections={mockSections}></MoviesCatalog>
       </main>

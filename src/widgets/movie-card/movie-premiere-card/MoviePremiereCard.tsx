@@ -2,7 +2,7 @@ import type { FC } from "react";
 import type { MoviePremiereCardProps } from "./MoviePremiereCard.types";
 import { MoviePoster } from "@/entities/movie/ui/movie-poster";
 import { MovieTitle } from "@/entities/movie/ui/movie-title";
-import { Badge } from "@/shared/ui/badge";
+import { Badge } from "@/shared/ui/Badge";
 import styles from "./MoviePremiereCard.module.css";
 import clsx from "clsx";
 
