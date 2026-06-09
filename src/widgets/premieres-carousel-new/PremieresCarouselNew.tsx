@@ -1,23 +1,10 @@
-//     <Swiper
-//       modules={[Navigation, EffectCreative]}
-//       navigation
-//       effect="creative"
-//       creativeEffect={{
-//         prev: {
-//           translate: [300, 0, -1],
-//           scale: 0.8,
-//         },
-//         next: {
-//           translate: [500, 0, -2],
-//           scale: 0.6,
-//         },
-//       }}
-
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCreative } from "swiper/modules";
 import { Navigation } from "swiper/modules";
 import type { Movie } from "@/shared/mocks/type";
 import type { FC } from "react";
 import { MoviePremiereCard } from "../movie-card/movie-premiere-card";
+import clsx from "clsx";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,26 +15,32 @@ type MovieProps = {
   movies: Movie[];
 };
 
+const Z_AXIS_DEPH = -436;
+const MOVE_PERCENTAGE = "92%";
+
 export const PremieresCarouselNew: FC<MovieProps> = ({ movies }) => {
   return (
     <div className={styles.viewport}>
       <Swiper
-        modules={[Navigation]}
-        navigation
-        slidesPerView={1}
-        spaceBetween={0}
-        centeredSlides={false}
-        watchSlidesProgress={true}
-        className={styles.swiper}
+        className={clsx(styles.slider)}
+        modules={[Navigation, EffectCreative]}
+        effect={"creative"}
+        slidesPerView={"auto"}
+        grabCursor
+        loop
+        creativeEffect={{
+          limitProgress: 3,
+          perspective: true,
+          prev: { translate: [`-${MOVE_PERCENTAGE}`, 0, Z_AXIS_DEPH] },
+          next: { translate: [MOVE_PERCENTAGE, 0, Z_AXIS_DEPH] },
+        }}
       >
         {movies.map((movie) => (
           <SwiperSlide
             key={movie.id}
-            className={styles.slide}
+            className={clsx(styles.slide)}
           >
-            <div className={styles.card}>
-              <MoviePremiereCard movie={movie} />
-            </div>
+            <MoviePremiereCard movie={movie} />
           </SwiperSlide>
         ))}
       </Swiper>
