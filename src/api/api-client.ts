@@ -302,7 +302,7 @@ export type authenticationValidateKeyResponse =
   | authenticationValidateKeyResponseError;
 
 export const getAuthenticationValidateKeyUrl = () => {
-  return `https://api.themoviedb.org/3/3/authentication`;
+  return `https://api.themoviedb.org/3/authentication`;
 };
 
 export const authenticationValidateKey = async (
@@ -341,8 +341,8 @@ export const getAccountDetailsUrl = (accountId: number, params?: AccountDetailsP
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}`;
+    ? `https://api.themoviedb.org/3/account/${accountId}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}`;
 };
 
 export const accountDetails = async (
@@ -383,8 +383,8 @@ export const getAccountAddFavoriteUrl = (accountId: number, params?: AccountAddF
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}/favorite?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}/favorite`;
+    ? `https://api.themoviedb.org/3/account/${accountId}/favorite?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}/favorite`;
 };
 
 export const accountAddFavorite = async (
@@ -431,8 +431,8 @@ export const getAccountAddToWatchlistUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}/watchlist?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}/watchlist`;
+    ? `https://api.themoviedb.org/3/account/${accountId}/watchlist?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}/watchlist`;
 };
 
 export const accountAddToWatchlist = async (
@@ -479,8 +479,8 @@ export const getAccountGetFavoritesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}/favorite/movies?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}/favorite/movies`;
+    ? `https://api.themoviedb.org/3/account/${accountId}/favorite/movies?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}/favorite/movies`;
 };
 
 export const accountGetFavorites = async (
@@ -521,8 +521,8 @@ export const getAccountFavoriteTvUrl = (accountId: number, params?: AccountFavor
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}/favorite/tv?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}/favorite/tv`;
+    ? `https://api.themoviedb.org/3/account/${accountId}/favorite/tv?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}/favorite/tv`;
 };
 
 export const accountFavoriteTv = async (
@@ -563,8 +563,8 @@ export const getAccountListsUrl = (accountId: number, params?: AccountListsParam
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}/lists?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}/lists`;
+    ? `https://api.themoviedb.org/3/account/${accountId}/lists?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}/lists`;
 };
 
 export const accountLists = async (
@@ -605,8 +605,8 @@ export const getAccountRatedMoviesUrl = (accountId: number, params?: AccountRate
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}/rated/movies?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}/rated/movies`;
+    ? `https://api.themoviedb.org/3/account/${accountId}/rated/movies?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}/rated/movies`;
 };
 
 export const accountRatedMovies = async (
@@ -647,8 +647,8 @@ export const getAccountRatedTvUrl = (accountId: number, params?: AccountRatedTvP
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}/rated/tv?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}/rated/tv`;
+    ? `https://api.themoviedb.org/3/account/${accountId}/rated/tv?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}/rated/tv`;
 };
 
 export const accountRatedTv = async (
@@ -692,8 +692,8 @@ export const getAccountRatedTvEpisodesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}/rated/tv/episodes?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}/rated/tv/episodes`;
+    ? `https://api.themoviedb.org/3/account/${accountId}/rated/tv/episodes?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}/rated/tv/episodes`;
 };
 
 export const accountRatedTvEpisodes = async (
@@ -737,8 +737,8 @@ export const getAccountWatchlistMoviesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}/watchlist/movies?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}/watchlist/movies`;
+    ? `https://api.themoviedb.org/3/account/${accountId}/watchlist/movies?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}/watchlist/movies`;
 };
 
 export const accountWatchlistMovies = async (
@@ -779,8 +779,8 @@ export const getAccountWatchlistTvUrl = (accountId: number, params?: AccountWatc
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/account/${accountId}/watchlist/tv?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/account/${accountId}/watchlist/tv`;
+    ? `https://api.themoviedb.org/3/account/${accountId}/watchlist/tv?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/account/${accountId}/watchlist/tv`;
 };
 
 export const accountWatchlistTv = async (
@@ -811,7 +811,7 @@ export type authenticationCreateGuestSessionResponse =
   authenticationCreateGuestSessionResponseSuccess;
 
 export const getAuthenticationCreateGuestSessionUrl = () => {
-  return `https://api.themoviedb.org/3/3/authentication/guest_session/new`;
+  return `https://api.themoviedb.org/3/authentication/guest_session/new`;
 };
 
 export const authenticationCreateGuestSession = async (
@@ -843,7 +843,7 @@ export type authenticationCreateRequestTokenResponse =
   authenticationCreateRequestTokenResponseSuccess;
 
 export const getAuthenticationCreateRequestTokenUrl = () => {
-  return `https://api.themoviedb.org/3/3/authentication/token/new`;
+  return `https://api.themoviedb.org/3/authentication/token/new`;
 };
 
 export const authenticationCreateRequestToken = async (
@@ -873,7 +873,7 @@ export type authenticationCreateSessionResponseSuccess = authenticationCreateSes
 export type authenticationCreateSessionResponse = authenticationCreateSessionResponseSuccess;
 
 export const getAuthenticationCreateSessionUrl = () => {
-  return `https://api.themoviedb.org/3/3/authentication/session/new`;
+  return `https://api.themoviedb.org/3/authentication/session/new`;
 };
 
 export const authenticationCreateSession = async (
@@ -905,7 +905,7 @@ export type authenticationCreateSessionFromV4TokenResponse =
   authenticationCreateSessionFromV4TokenResponseSuccess;
 
 export const getAuthenticationCreateSessionFromV4TokenUrl = () => {
-  return `https://api.themoviedb.org/3/3/authentication/session/convert/4`;
+  return `https://api.themoviedb.org/3/authentication/session/convert/4`;
 };
 
 export const authenticationCreateSessionFromV4Token = async (
@@ -941,7 +941,7 @@ export type authenticationCreateSessionFromLoginResponse =
   authenticationCreateSessionFromLoginResponseSuccess;
 
 export const getAuthenticationCreateSessionFromLoginUrl = () => {
-  return `https://api.themoviedb.org/3/3/authentication/token/validate_with_login`;
+  return `https://api.themoviedb.org/3/authentication/token/validate_with_login`;
 };
 
 export const authenticationCreateSessionFromLogin = async (
@@ -974,7 +974,7 @@ export type authenticationDeleteSessionResponseSuccess = authenticationDeleteSes
 export type authenticationDeleteSessionResponse = authenticationDeleteSessionResponseSuccess;
 
 export const getAuthenticationDeleteSessionUrl = () => {
-  return `https://api.themoviedb.org/3/3/authentication/session`;
+  return `https://api.themoviedb.org/3/authentication/session`;
 };
 
 export const authenticationDeleteSession = async (
@@ -1005,7 +1005,7 @@ export type certificationMovieListResponseSuccess = certificationMovieListRespon
 export type certificationMovieListResponse = certificationMovieListResponseSuccess;
 
 export const getCertificationMovieListUrl = () => {
-  return `https://api.themoviedb.org/3/3/certification/movie/list`;
+  return `https://api.themoviedb.org/3/certification/movie/list`;
 };
 
 export const certificationMovieList = async (
@@ -1032,7 +1032,7 @@ export type certificationsTvListResponseSuccess = certificationsTvListResponse20
 export type certificationsTvListResponse = certificationsTvListResponseSuccess;
 
 export const getCertificationsTvListUrl = () => {
-  return `https://api.themoviedb.org/3/3/certification/tv/list`;
+  return `https://api.themoviedb.org/3/certification/tv/list`;
 };
 
 export const certificationsTvList = async (
@@ -1071,8 +1071,8 @@ export const getChangesMovieListUrl = (params?: ChangesMovieListParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/changes?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/changes`;
+    ? `https://api.themoviedb.org/3/movie/changes?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/changes`;
 };
 
 export const changesMovieList = async (
@@ -1111,8 +1111,8 @@ export const getChangesPeopleListUrl = (params?: ChangesPeopleListParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/person/changes?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/person/changes`;
+    ? `https://api.themoviedb.org/3/person/changes?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/person/changes`;
 };
 
 export const changesPeopleList = async (
@@ -1151,8 +1151,8 @@ export const getChangesTvListUrl = (params?: ChangesTvListParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/changes?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/changes`;
+    ? `https://api.themoviedb.org/3/tv/changes?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/changes`;
 };
 
 export const changesTvList = async (
@@ -1192,8 +1192,8 @@ export const getCollectionDetailsUrl = (collectionId: number, params?: Collectio
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/collection/${collectionId}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/collection/${collectionId}`;
+    ? `https://api.themoviedb.org/3/collection/${collectionId}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/collection/${collectionId}`;
 };
 
 export const collectionDetails = async (
@@ -1234,8 +1234,8 @@ export const getCollectionImagesUrl = (collectionId: number, params?: Collection
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/collection/${collectionId}/images?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/collection/${collectionId}/images`;
+    ? `https://api.themoviedb.org/3/collection/${collectionId}/images?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/collection/${collectionId}/images`;
 };
 
 export const collectionImages = async (
@@ -1264,7 +1264,7 @@ export type collectionTranslationsResponseSuccess = collectionTranslationsRespon
 export type collectionTranslationsResponse = collectionTranslationsResponseSuccess;
 
 export const getCollectionTranslationsUrl = (collectionId: number) => {
-  return `https://api.themoviedb.org/3/3/collection/${collectionId}/translations`;
+  return `https://api.themoviedb.org/3/collection/${collectionId}/translations`;
 };
 
 export const collectionTranslations = async (
@@ -1293,7 +1293,7 @@ export type companyDetailsResponseSuccess = companyDetailsResponse200 & {
 export type companyDetailsResponse = companyDetailsResponseSuccess;
 
 export const getCompanyDetailsUrl = (companyId: number) => {
-  return `https://api.themoviedb.org/3/3/company/${companyId}`;
+  return `https://api.themoviedb.org/3/company/${companyId}`;
 };
 
 export const companyDetails = async (
@@ -1322,7 +1322,7 @@ export type companyAlternativeNamesResponseSuccess = companyAlternativeNamesResp
 export type companyAlternativeNamesResponse = companyAlternativeNamesResponseSuccess;
 
 export const getCompanyAlternativeNamesUrl = (companyId: number) => {
-  return `https://api.themoviedb.org/3/3/company/${companyId}/alternative_names`;
+  return `https://api.themoviedb.org/3/company/${companyId}/alternative_names`;
 };
 
 export const companyAlternativeNames = async (
@@ -1351,7 +1351,7 @@ export type companyImagesResponseSuccess = companyImagesResponse200 & {
 export type companyImagesResponse = companyImagesResponseSuccess;
 
 export const getCompanyImagesUrl = (companyId: number) => {
-  return `https://api.themoviedb.org/3/3/company/${companyId}/images`;
+  return `https://api.themoviedb.org/3/company/${companyId}/images`;
 };
 
 export const companyImages = async (
@@ -1380,7 +1380,7 @@ export type configurationDetailsResponseSuccess = configurationDetailsResponse20
 export type configurationDetailsResponse = configurationDetailsResponseSuccess;
 
 export const getConfigurationDetailsUrl = () => {
-  return `https://api.themoviedb.org/3/3/configuration`;
+  return `https://api.themoviedb.org/3/configuration`;
 };
 
 export const configurationDetails = async (
@@ -1419,8 +1419,8 @@ export const getConfigurationCountriesUrl = (params?: ConfigurationCountriesPara
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/configuration/countries?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/configuration/countries`;
+    ? `https://api.themoviedb.org/3/configuration/countries?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/configuration/countries`;
 };
 
 export const configurationCountries = async (
@@ -1449,7 +1449,7 @@ export type configurationJobsResponseSuccess = configurationJobsResponse200 & {
 export type configurationJobsResponse = configurationJobsResponseSuccess;
 
 export const getConfigurationJobsUrl = () => {
-  return `https://api.themoviedb.org/3/3/configuration/jobs`;
+  return `https://api.themoviedb.org/3/configuration/jobs`;
 };
 
 export const configurationJobs = async (
@@ -1477,7 +1477,7 @@ export type configurationLanguagesResponseSuccess = configurationLanguagesRespon
 export type configurationLanguagesResponse = configurationLanguagesResponseSuccess;
 
 export const getConfigurationLanguagesUrl = () => {
-  return `https://api.themoviedb.org/3/3/configuration/languages`;
+  return `https://api.themoviedb.org/3/configuration/languages`;
 };
 
 export const configurationLanguages = async (
@@ -1507,7 +1507,7 @@ export type configurationPrimaryTranslationsResponse =
   configurationPrimaryTranslationsResponseSuccess;
 
 export const getConfigurationPrimaryTranslationsUrl = () => {
-  return `https://api.themoviedb.org/3/3/configuration/primary_translations`;
+  return `https://api.themoviedb.org/3/configuration/primary_translations`;
 };
 
 export const configurationPrimaryTranslations = async (
@@ -1538,7 +1538,7 @@ export type configurationTimezonesResponseSuccess = configurationTimezonesRespon
 export type configurationTimezonesResponse = configurationTimezonesResponseSuccess;
 
 export const getConfigurationTimezonesUrl = () => {
-  return `https://api.themoviedb.org/3/3/configuration/timezones`;
+  return `https://api.themoviedb.org/3/configuration/timezones`;
 };
 
 export const configurationTimezones = async (
@@ -1577,8 +1577,8 @@ export const getCreditDetailsUrl = (creditId: string, params?: CreditDetailsPara
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/credit/${creditId}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/credit/${creditId}`;
+    ? `https://api.themoviedb.org/3/credit/${creditId}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/credit/${creditId}`;
 };
 
 export const creditDetails = async (
@@ -1619,8 +1619,8 @@ export const getDiscoverMovieUrl = (params?: DiscoverMovieParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/discover/movie?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/discover/movie`;
+    ? `https://api.themoviedb.org/3/discover/movie?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/discover/movie`;
 };
 
 export const discoverMovie = async (
@@ -1660,8 +1660,8 @@ export const getDiscoverTvUrl = (params?: DiscoverTvParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/discover/tv?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/discover/tv`;
+    ? `https://api.themoviedb.org/3/discover/tv?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/discover/tv`;
 };
 
 export const discoverTv = async (
@@ -1701,8 +1701,8 @@ export const getFindByIdUrl = (externalId: string, params: FindByIdParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/find/${externalId}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/find/${externalId}`;
+    ? `https://api.themoviedb.org/3/find/${externalId}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/find/${externalId}`;
 };
 
 export const findById = async (
@@ -1743,8 +1743,8 @@ export const getGenreMovieListUrl = (params?: GenreMovieListParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/genre/movie/list?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/genre/movie/list`;
+    ? `https://api.themoviedb.org/3/genre/movie/list?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/genre/movie/list`;
 };
 
 export const genreMovieList = async (
@@ -1784,8 +1784,8 @@ export const getGenreTvListUrl = (params?: GenreTvListParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/genre/tv/list?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/genre/tv/list`;
+    ? `https://api.themoviedb.org/3/genre/tv/list?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/genre/tv/list`;
 };
 
 export const genreTvList = async (
@@ -1828,8 +1828,8 @@ export const getGuestSessionRatedMoviesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/guest_session/${guestSessionId}/rated/movies?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/guest_session/${guestSessionId}/rated/movies`;
+    ? `https://api.themoviedb.org/3/guest_session/${guestSessionId}/rated/movies?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/guest_session/${guestSessionId}/rated/movies`;
 };
 
 export const guestSessionRatedMovies = async (
@@ -1876,8 +1876,8 @@ export const getGuestSessionRatedTvUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/guest_session/${guestSessionId}/rated/tv?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/guest_session/${guestSessionId}/rated/tv`;
+    ? `https://api.themoviedb.org/3/guest_session/${guestSessionId}/rated/tv?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/guest_session/${guestSessionId}/rated/tv`;
 };
 
 export const guestSessionRatedTv = async (
@@ -1921,8 +1921,8 @@ export const getGuestSessionRatedTvEpisodesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/guest_session/${guestSessionId}/rated/tv/episodes?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/guest_session/${guestSessionId}/rated/tv/episodes`;
+    ? `https://api.themoviedb.org/3/guest_session/${guestSessionId}/rated/tv/episodes?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/guest_session/${guestSessionId}/rated/tv/episodes`;
 };
 
 export const guestSessionRatedTvEpisodes = async (
@@ -1954,7 +1954,7 @@ export type keywordDetailsResponseSuccess = keywordDetailsResponse200 & {
 export type keywordDetailsResponse = keywordDetailsResponseSuccess;
 
 export const getKeywordDetailsUrl = (keywordId: number) => {
-  return `https://api.themoviedb.org/3/3/keyword/${keywordId}`;
+  return `https://api.themoviedb.org/3/keyword/${keywordId}`;
 };
 
 export const keywordDetails = async (
@@ -1993,8 +1993,8 @@ export const getKeywordMoviesUrl = (keywordId: string, params?: KeywordMoviesPar
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/keyword/${keywordId}/movies?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/keyword/${keywordId}/movies`;
+    ? `https://api.themoviedb.org/3/keyword/${keywordId}/movies?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/keyword/${keywordId}/movies`;
 };
 
 export const keywordMovies = async (
@@ -2035,8 +2035,8 @@ export const getListAddMovieUrl = (listId: number, params: ListAddMovieParams) =
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/list/${listId}/add_item?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/list/${listId}/add_item`;
+    ? `https://api.themoviedb.org/3/list/${listId}/add_item?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/list/${listId}/add_item`;
 };
 
 export const listAddMovie = async (
@@ -2080,8 +2080,8 @@ export const getListCheckItemStatusUrl = (listId: number, params?: ListCheckItem
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/list/${listId}/item_status?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/list/${listId}/item_status`;
+    ? `https://api.themoviedb.org/3/list/${listId}/item_status?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/list/${listId}/item_status`;
 };
 
 export const listCheckItemStatus = async (
@@ -2122,8 +2122,8 @@ export const getListClearUrl = (listId: number, params: ListClearParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/list/${listId}/clear?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/list/${listId}/clear`;
+    ? `https://api.themoviedb.org/3/list/${listId}/clear?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/list/${listId}/clear`;
 };
 
 export const listClear = async (
@@ -2163,8 +2163,8 @@ export const getListCreateUrl = (params: ListCreateParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/list?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/list`;
+    ? `https://api.themoviedb.org/3/list?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/list`;
 };
 
 export const listCreate = async (
@@ -2207,8 +2207,8 @@ export const getListDeleteUrl = (listId: number, params: ListDeleteParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/list/${listId}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/list/${listId}`;
+    ? `https://api.themoviedb.org/3/list/${listId}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/list/${listId}`;
 };
 
 export const listDelete = async (
@@ -2248,8 +2248,8 @@ export const getListDetailsUrl = (listId: number, params?: ListDetailsParams) =>
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/list/${listId}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/list/${listId}`;
+    ? `https://api.themoviedb.org/3/list/${listId}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/list/${listId}`;
 };
 
 export const listDetails = async (
@@ -2290,8 +2290,8 @@ export const getListRemoveMovieUrl = (listId: number, params: ListRemoveMoviePar
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/list/${listId}/remove_item?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/list/${listId}/remove_item`;
+    ? `https://api.themoviedb.org/3/list/${listId}/remove_item?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/list/${listId}/remove_item`;
 };
 
 export const listRemoveMovie = async (
@@ -2335,8 +2335,8 @@ export const getMovieNowPlayingListUrl = (params?: MovieNowPlayingListParams) =>
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/now_playing?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/now_playing`;
+    ? `https://api.themoviedb.org/3/movie/now_playing?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/now_playing`;
 };
 
 export const movieNowPlayingList = async (
@@ -2376,8 +2376,8 @@ export const getMoviePopularListUrl = (params?: MoviePopularListParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/popular?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/popular`;
+    ? `https://api.themoviedb.org/3/movie/popular?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/popular`;
 };
 
 export const moviePopularList = async (
@@ -2417,8 +2417,8 @@ export const getMovieTopRatedListUrl = (params?: MovieTopRatedListParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/top_rated?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/top_rated`;
+    ? `https://api.themoviedb.org/3/movie/top_rated?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/top_rated`;
 };
 
 export const movieTopRatedList = async (
@@ -2458,8 +2458,8 @@ export const getMovieUpcomingListUrl = (params?: MovieUpcomingListParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/upcoming?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/upcoming`;
+    ? `https://api.themoviedb.org/3/movie/upcoming?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/upcoming`;
 };
 
 export const movieUpcomingList = async (
@@ -2499,8 +2499,8 @@ export const getMovieDetailsUrl = (movieId: number, params?: MovieDetailsParams)
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}`;
 };
 
 export const movieDetails = async (
@@ -2541,8 +2541,8 @@ export const getMovieAccountStatesUrl = (movieId: number, params?: MovieAccountS
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/account_states?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/account_states`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/account_states?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/account_states`;
 };
 
 export const movieAccountStates = async (
@@ -2586,8 +2586,8 @@ export const getMovieAlternativeTitlesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/alternative_titles?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/alternative_titles`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/alternative_titles?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/alternative_titles`;
 };
 
 export const movieAlternativeTitles = async (
@@ -2628,8 +2628,8 @@ export const getMovieChangesUrl = (movieId: number, params?: MovieChangesParams)
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/changes?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/changes`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/changes?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/changes`;
 };
 
 export const movieChanges = async (
@@ -2669,8 +2669,8 @@ export const getMovieCreditsUrl = (movieId: number, params?: MovieCreditsParams)
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/credits?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/credits`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/credits?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/credits`;
 };
 
 export const movieCredits = async (
@@ -2699,7 +2699,7 @@ export type movieExternalIdsResponseSuccess = movieExternalIdsResponse200 & {
 export type movieExternalIdsResponse = movieExternalIdsResponseSuccess;
 
 export const getMovieExternalIdsUrl = (movieId: number) => {
-  return `https://api.themoviedb.org/3/3/movie/${movieId}/external_ids`;
+  return `https://api.themoviedb.org/3/movie/${movieId}/external_ids`;
 };
 
 export const movieExternalIds = async (
@@ -2739,8 +2739,8 @@ export const getMovieImagesUrl = (movieId: number, params?: MovieImagesParams) =
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/images?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/images`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/images?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/images`;
 };
 
 export const movieImages = async (
@@ -2769,7 +2769,7 @@ export type movieKeywordsResponseSuccess = movieKeywordsResponse200 & {
 export type movieKeywordsResponse = movieKeywordsResponseSuccess;
 
 export const getMovieKeywordsUrl = (movieId: string) => {
-  return `https://api.themoviedb.org/3/3/movie/${movieId}/keywords`;
+  return `https://api.themoviedb.org/3/movie/${movieId}/keywords`;
 };
 
 export const movieKeywords = async (
@@ -2798,7 +2798,7 @@ export type movieLatestIdResponseSuccess = movieLatestIdResponse200 & {
 export type movieLatestIdResponse = movieLatestIdResponseSuccess;
 
 export const getMovieLatestIdUrl = () => {
-  return `https://api.themoviedb.org/3/3/movie/latest`;
+  return `https://api.themoviedb.org/3/movie/latest`;
 };
 
 export const movieLatestId = async (options?: RequestInit): Promise<movieLatestIdResponse> => {
@@ -2835,8 +2835,8 @@ export const getMovieListsUrl = (movieId: number, params?: MovieListsParams) => 
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/lists?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/lists`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/lists?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/lists`;
 };
 
 export const movieLists = async (
@@ -2879,8 +2879,8 @@ export const getMovieRecommendationsUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/recommendations?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/recommendations`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/recommendations?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/recommendations`;
 };
 
 export const movieRecommendations = async (
@@ -2910,7 +2910,7 @@ export type movieReleaseDatesResponseSuccess = movieReleaseDatesResponse200 & {
 export type movieReleaseDatesResponse = movieReleaseDatesResponseSuccess;
 
 export const getMovieReleaseDatesUrl = (movieId: number) => {
-  return `https://api.themoviedb.org/3/3/movie/${movieId}/release_dates`;
+  return `https://api.themoviedb.org/3/movie/${movieId}/release_dates`;
 };
 
 export const movieReleaseDates = async (
@@ -2950,8 +2950,8 @@ export const getMovieReviewsUrl = (movieId: number, params?: MovieReviewsParams)
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/reviews?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/reviews`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/reviews?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/reviews`;
 };
 
 export const movieReviews = async (
@@ -2992,8 +2992,8 @@ export const getMovieSimilarUrl = (movieId: number, params?: MovieSimilarParams)
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/similar?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/similar`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/similar?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/similar`;
 };
 
 export const movieSimilar = async (
@@ -3023,7 +3023,7 @@ export type movieTranslationsResponseSuccess = movieTranslationsResponse200 & {
 export type movieTranslationsResponse = movieTranslationsResponseSuccess;
 
 export const getMovieTranslationsUrl = (movieId: number) => {
-  return `https://api.themoviedb.org/3/3/movie/${movieId}/translations`;
+  return `https://api.themoviedb.org/3/movie/${movieId}/translations`;
 };
 
 export const movieTranslations = async (
@@ -3062,8 +3062,8 @@ export const getMovieVideosUrl = (movieId: number, params?: MovieVideosParams) =
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/videos?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/videos`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/videos?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/videos`;
 };
 
 export const movieVideos = async (
@@ -3093,7 +3093,7 @@ export type movieWatchProvidersResponseSuccess = movieWatchProvidersResponse200 
 export type movieWatchProvidersResponse = movieWatchProvidersResponseSuccess;
 
 export const getMovieWatchProvidersUrl = (movieId: number) => {
-  return `https://api.themoviedb.org/3/3/movie/${movieId}/watch/providers`;
+  return `https://api.themoviedb.org/3/movie/${movieId}/watch/providers`;
 };
 
 export const movieWatchProviders = async (
@@ -3133,8 +3133,8 @@ export const getMovieAddRatingUrl = (movieId: number, params?: MovieAddRatingPar
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/rating?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/rating`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/rating?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/rating`;
 };
 
 export const movieAddRating = async (
@@ -3178,8 +3178,8 @@ export const getMovieDeleteRatingUrl = (movieId: number, params?: MovieDeleteRat
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/movie/${movieId}/rating?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/movie/${movieId}/rating`;
+    ? `https://api.themoviedb.org/3/movie/${movieId}/rating?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/movie/${movieId}/rating`;
 };
 
 export const movieDeleteRating = async (
@@ -3208,7 +3208,7 @@ export type networkDetailsResponseSuccess = networkDetailsResponse200 & {
 export type networkDetailsResponse = networkDetailsResponseSuccess;
 
 export const getNetworkDetailsUrl = (networkId: number) => {
-  return `https://api.themoviedb.org/3/3/network/${networkId}`;
+  return `https://api.themoviedb.org/3/network/${networkId}`;
 };
 
 export const networkDetails = async (
@@ -3237,7 +3237,7 @@ export type detailsCopyResponseSuccess = detailsCopyResponse200 & {
 export type detailsCopyResponse = detailsCopyResponseSuccess;
 
 export const getDetailsCopyUrl = (networkId: number) => {
-  return `https://api.themoviedb.org/3/3/network/${networkId}/alternative_names`;
+  return `https://api.themoviedb.org/3/network/${networkId}/alternative_names`;
 };
 
 export const detailsCopy = async (
@@ -3266,7 +3266,7 @@ export type alternativeNamesCopyResponseSuccess = alternativeNamesCopyResponse20
 export type alternativeNamesCopyResponse = alternativeNamesCopyResponseSuccess;
 
 export const getAlternativeNamesCopyUrl = (networkId: number) => {
-  return `https://api.themoviedb.org/3/3/network/${networkId}/images`;
+  return `https://api.themoviedb.org/3/network/${networkId}/images`;
 };
 
 export const alternativeNamesCopy = async (
@@ -3306,8 +3306,8 @@ export const getPersonPopularListUrl = (params?: PersonPopularListParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/person/popular?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/person/popular`;
+    ? `https://api.themoviedb.org/3/person/popular?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/person/popular`;
 };
 
 export const personPopularList = async (
@@ -3347,8 +3347,8 @@ export const getPersonDetailsUrl = (personId: number, params?: PersonDetailsPara
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/person/${personId}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/person/${personId}`;
+    ? `https://api.themoviedb.org/3/person/${personId}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/person/${personId}`;
 };
 
 export const personDetails = async (
@@ -3389,8 +3389,8 @@ export const getPersonChangesUrl = (personId: number, params?: PersonChangesPara
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/person/${personId}/changes?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/person/${personId}/changes`;
+    ? `https://api.themoviedb.org/3/person/${personId}/changes?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/person/${personId}/changes`;
 };
 
 export const personChanges = async (
@@ -3434,8 +3434,8 @@ export const getPersonCombinedCreditsUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/person/${personId}/combined_credits?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/person/${personId}/combined_credits`;
+    ? `https://api.themoviedb.org/3/person/${personId}/combined_credits?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/person/${personId}/combined_credits`;
 };
 
 export const personCombinedCredits = async (
@@ -3465,7 +3465,7 @@ export type personExternalIdsResponseSuccess = personExternalIdsResponse200 & {
 export type personExternalIdsResponse = personExternalIdsResponseSuccess;
 
 export const getPersonExternalIdsUrl = (personId: number) => {
-  return `https://api.themoviedb.org/3/3/person/${personId}/external_ids`;
+  return `https://api.themoviedb.org/3/person/${personId}/external_ids`;
 };
 
 export const personExternalIds = async (
@@ -3494,7 +3494,7 @@ export type personImagesResponseSuccess = personImagesResponse200 & {
 export type personImagesResponse = personImagesResponseSuccess;
 
 export const getPersonImagesUrl = (personId: number) => {
-  return `https://api.themoviedb.org/3/3/person/${personId}/images`;
+  return `https://api.themoviedb.org/3/person/${personId}/images`;
 };
 
 export const personImages = async (
@@ -3523,7 +3523,7 @@ export type personLatestIdResponseSuccess = personLatestIdResponse200 & {
 export type personLatestIdResponse = personLatestIdResponseSuccess;
 
 export const getPersonLatestIdUrl = () => {
-  return `https://api.themoviedb.org/3/3/person/latest`;
+  return `https://api.themoviedb.org/3/person/latest`;
 };
 
 export const personLatestId = async (options?: RequestInit): Promise<personLatestIdResponse> => {
@@ -3560,8 +3560,8 @@ export const getPersonMovieCreditsUrl = (personId: number, params?: PersonMovieC
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/person/${personId}/movie_credits?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/person/${personId}/movie_credits`;
+    ? `https://api.themoviedb.org/3/person/${personId}/movie_credits?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/person/${personId}/movie_credits`;
 };
 
 export const personMovieCredits = async (
@@ -3602,8 +3602,8 @@ export const getPersonTvCreditsUrl = (personId: number, params?: PersonTvCredits
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/person/${personId}/tv_credits?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/person/${personId}/tv_credits`;
+    ? `https://api.themoviedb.org/3/person/${personId}/tv_credits?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/person/${personId}/tv_credits`;
 };
 
 export const personTvCredits = async (
@@ -3644,8 +3644,8 @@ export const getPersonTaggedImagesUrl = (personId: number, params?: PersonTagged
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/person/${personId}/tagged_images?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/person/${personId}/tagged_images`;
+    ? `https://api.themoviedb.org/3/person/${personId}/tagged_images?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/person/${personId}/tagged_images`;
 };
 
 export const personTaggedImages = async (
@@ -3675,7 +3675,7 @@ export type translationsResponseSuccess = translationsResponse200 & {
 export type translationsResponse = translationsResponseSuccess;
 
 export const getTranslationsUrl = (personId: number) => {
-  return `https://api.themoviedb.org/3/3/person/${personId}/translations`;
+  return `https://api.themoviedb.org/3/person/${personId}/translations`;
 };
 
 export const translations = async (
@@ -3704,7 +3704,7 @@ export type reviewDetailsResponseSuccess = reviewDetailsResponse200 & {
 export type reviewDetailsResponse = reviewDetailsResponseSuccess;
 
 export const getReviewDetailsUrl = (reviewId: string) => {
-  return `https://api.themoviedb.org/3/3/review/${reviewId}`;
+  return `https://api.themoviedb.org/3/review/${reviewId}`;
 };
 
 export const reviewDetails = async (
@@ -3744,8 +3744,8 @@ export const getSearchCollectionUrl = (params: SearchCollectionParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/search/collection?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/search/collection`;
+    ? `https://api.themoviedb.org/3/search/collection?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/search/collection`;
 };
 
 export const searchCollection = async (
@@ -3785,8 +3785,8 @@ export const getSearchCompanyUrl = (params: SearchCompanyParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/search/company?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/search/company`;
+    ? `https://api.themoviedb.org/3/search/company?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/search/company`;
 };
 
 export const searchCompany = async (
@@ -3826,8 +3826,8 @@ export const getSearchKeywordUrl = (params: SearchKeywordParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/search/keyword?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/search/keyword`;
+    ? `https://api.themoviedb.org/3/search/keyword?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/search/keyword`;
 };
 
 export const searchKeyword = async (
@@ -3867,8 +3867,8 @@ export const getSearchMovieUrl = (params: SearchMovieParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/search/movie?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/search/movie`;
+    ? `https://api.themoviedb.org/3/search/movie?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/search/movie`;
 };
 
 export const searchMovie = async (
@@ -3908,8 +3908,8 @@ export const getSearchMultiUrl = (params: SearchMultiParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/search/multi?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/search/multi`;
+    ? `https://api.themoviedb.org/3/search/multi?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/search/multi`;
 };
 
 export const searchMulti = async (
@@ -3949,8 +3949,8 @@ export const getSearchPersonUrl = (params: SearchPersonParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/search/person?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/search/person`;
+    ? `https://api.themoviedb.org/3/search/person?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/search/person`;
 };
 
 export const searchPerson = async (
@@ -3990,8 +3990,8 @@ export const getSearchTvUrl = (params: SearchTvParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/search/tv?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/search/tv`;
+    ? `https://api.themoviedb.org/3/search/tv?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/search/tv`;
 };
 
 export const searchTv = async (
@@ -4034,8 +4034,8 @@ export const getTrendingAllUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/trending/all/${timeWindow}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/trending/all/${timeWindow}`;
+    ? `https://api.themoviedb.org/3/trending/all/${timeWindow}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/trending/all/${timeWindow}`;
 };
 
 export const trendingAll = async (
@@ -4079,8 +4079,8 @@ export const getTrendingMoviesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/trending/movie/${timeWindow}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/trending/movie/${timeWindow}`;
+    ? `https://api.themoviedb.org/3/trending/movie/${timeWindow}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/trending/movie/${timeWindow}`;
 };
 
 export const trendingMovies = async (
@@ -4124,8 +4124,8 @@ export const getTrendingPeopleUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/trending/person/${timeWindow}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/trending/person/${timeWindow}`;
+    ? `https://api.themoviedb.org/3/trending/person/${timeWindow}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/trending/person/${timeWindow}`;
 };
 
 export const trendingPeople = async (
@@ -4166,8 +4166,8 @@ export const getTrendingTvUrl = (params?: TrendingTvParams, timeWindow: "day" | 
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/trending/tv/${timeWindow}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/trending/tv/${timeWindow}`;
+    ? `https://api.themoviedb.org/3/trending/tv/${timeWindow}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/trending/tv/${timeWindow}`;
 };
 
 export const trendingTv = async (
@@ -4208,8 +4208,8 @@ export const getTvSeriesAiringTodayListUrl = (params?: TvSeriesAiringTodayListPa
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/airing_today?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/airing_today`;
+    ? `https://api.themoviedb.org/3/tv/airing_today?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/airing_today`;
 };
 
 export const tvSeriesAiringTodayList = async (
@@ -4249,8 +4249,8 @@ export const getTvSeriesOnTheAirListUrl = (params?: TvSeriesOnTheAirListParams) 
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/on_the_air?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/on_the_air`;
+    ? `https://api.themoviedb.org/3/tv/on_the_air?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/on_the_air`;
 };
 
 export const tvSeriesOnTheAirList = async (
@@ -4290,8 +4290,8 @@ export const getTvSeriesPopularListUrl = (params?: TvSeriesPopularListParams) =>
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/popular?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/popular`;
+    ? `https://api.themoviedb.org/3/tv/popular?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/popular`;
 };
 
 export const tvSeriesPopularList = async (
@@ -4331,8 +4331,8 @@ export const getTvSeriesTopRatedListUrl = (params?: TvSeriesTopRatedListParams) 
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/top_rated?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/top_rated`;
+    ? `https://api.themoviedb.org/3/tv/top_rated?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/top_rated`;
 };
 
 export const tvSeriesTopRatedList = async (
@@ -4372,8 +4372,8 @@ export const getTvSeriesDetailsUrl = (seriesId: number, params?: TvSeriesDetails
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}`;
 };
 
 export const tvSeriesDetails = async (
@@ -4417,8 +4417,8 @@ export const getTvSeriesAccountStatesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/account_states?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/account_states`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/account_states?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/account_states`;
 };
 
 export const tvSeriesAccountStates = async (
@@ -4462,8 +4462,8 @@ export const getTvSeriesAggregateCreditsUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/aggregate_credits?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/aggregate_credits`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/aggregate_credits?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/aggregate_credits`;
 };
 
 export const tvSeriesAggregateCredits = async (
@@ -4496,7 +4496,7 @@ export type tvSeriesAlternativeTitlesResponseSuccess = tvSeriesAlternativeTitles
 export type tvSeriesAlternativeTitlesResponse = tvSeriesAlternativeTitlesResponseSuccess;
 
 export const getTvSeriesAlternativeTitlesUrl = (seriesId: number) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/alternative_titles`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/alternative_titles`;
 };
 
 export const tvSeriesAlternativeTitles = async (
@@ -4536,8 +4536,8 @@ export const getTvSeriesChangesUrl = (seriesId: number, params?: TvSeriesChanges
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/changes?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/changes`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/changes?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/changes`;
 };
 
 export const tvSeriesChanges = async (
@@ -4567,7 +4567,7 @@ export type tvSeriesContentRatingsResponseSuccess = tvSeriesContentRatingsRespon
 export type tvSeriesContentRatingsResponse = tvSeriesContentRatingsResponseSuccess;
 
 export const getTvSeriesContentRatingsUrl = (seriesId: number) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/content_ratings`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/content_ratings`;
 };
 
 export const tvSeriesContentRatings = async (
@@ -4607,8 +4607,8 @@ export const getTvSeriesCreditsUrl = (seriesId: number, params?: TvSeriesCredits
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/credits?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/credits`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/credits?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/credits`;
 };
 
 export const tvSeriesCredits = async (
@@ -4638,7 +4638,7 @@ export type tvSeriesEpisodeGroupsResponseSuccess = tvSeriesEpisodeGroupsResponse
 export type tvSeriesEpisodeGroupsResponse = tvSeriesEpisodeGroupsResponseSuccess;
 
 export const getTvSeriesEpisodeGroupsUrl = (seriesId: number) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/episode_groups`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/episode_groups`;
 };
 
 export const tvSeriesEpisodeGroups = async (
@@ -4667,7 +4667,7 @@ export type tvSeriesExternalIdsResponseSuccess = tvSeriesExternalIdsResponse200 
 export type tvSeriesExternalIdsResponse = tvSeriesExternalIdsResponseSuccess;
 
 export const getTvSeriesExternalIdsUrl = (seriesId: number) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/external_ids`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/external_ids`;
 };
 
 export const tvSeriesExternalIds = async (
@@ -4707,8 +4707,8 @@ export const getTvSeriesImagesUrl = (seriesId: number, params?: TvSeriesImagesPa
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/images?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/images`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/images?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/images`;
 };
 
 export const tvSeriesImages = async (
@@ -4738,7 +4738,7 @@ export type tvSeriesKeywordsResponseSuccess = tvSeriesKeywordsResponse200 & {
 export type tvSeriesKeywordsResponse = tvSeriesKeywordsResponseSuccess;
 
 export const getTvSeriesKeywordsUrl = (seriesId: number) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/keywords`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/keywords`;
 };
 
 export const tvSeriesKeywords = async (
@@ -4767,7 +4767,7 @@ export type tvSeriesLatestIdResponseSuccess = tvSeriesLatestIdResponse200 & {
 export type tvSeriesLatestIdResponse = tvSeriesLatestIdResponseSuccess;
 
 export const getTvSeriesLatestIdUrl = () => {
-  return `https://api.themoviedb.org/3/3/tv/latest`;
+  return `https://api.themoviedb.org/3/tv/latest`;
 };
 
 export const tvSeriesLatestId = async (
@@ -4806,8 +4806,8 @@ export const getListsCopyUrl = (seriesId: number, params?: ListsCopyParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/lists?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/lists`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/lists?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/lists`;
 };
 
 export const listsCopy = async (
@@ -4850,8 +4850,8 @@ export const getTvSeriesRecommendationsUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/recommendations?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/recommendations`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/recommendations?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/recommendations`;
 };
 
 export const tvSeriesRecommendations = async (
@@ -4895,8 +4895,8 @@ export const getTvSeriesReviewsUrl = (seriesId: number, params?: TvSeriesReviews
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/reviews?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/reviews`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/reviews?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/reviews`;
 };
 
 export const tvSeriesReviews = async (
@@ -4927,7 +4927,7 @@ export type tvSeriesScreenedTheatricallyResponseSuccess =
 export type tvSeriesScreenedTheatricallyResponse = tvSeriesScreenedTheatricallyResponseSuccess;
 
 export const getTvSeriesScreenedTheatricallyUrl = (seriesId: number) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/screened_theatrically`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/screened_theatrically`;
 };
 
 export const tvSeriesScreenedTheatrically = async (
@@ -4970,8 +4970,8 @@ export const getTvSeriesSimilarUrl = (seriesId: string, params?: TvSeriesSimilar
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/similar?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/similar`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/similar?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/similar`;
 };
 
 export const tvSeriesSimilar = async (
@@ -5001,7 +5001,7 @@ export type tvSeriesTranslationsResponseSuccess = tvSeriesTranslationsResponse20
 export type tvSeriesTranslationsResponse = tvSeriesTranslationsResponseSuccess;
 
 export const getTvSeriesTranslationsUrl = (seriesId: number) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/translations`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/translations`;
 };
 
 export const tvSeriesTranslations = async (
@@ -5041,8 +5041,8 @@ export const getTvSeriesVideosUrl = (seriesId: number, params?: TvSeriesVideosPa
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/videos?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/videos`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/videos?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/videos`;
 };
 
 export const tvSeriesVideos = async (
@@ -5072,7 +5072,7 @@ export type tvSeriesWatchProvidersResponseSuccess = tvSeriesWatchProvidersRespon
 export type tvSeriesWatchProvidersResponse = tvSeriesWatchProvidersResponseSuccess;
 
 export const getTvSeriesWatchProvidersUrl = (seriesId: number) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/watch/providers`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/watch/providers`;
 };
 
 export const tvSeriesWatchProviders = async (
@@ -5112,8 +5112,8 @@ export const getTvSeriesAddRatingUrl = (seriesId: number, params?: TvSeriesAddRa
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/rating?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/rating`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/rating?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/rating`;
 };
 
 export const tvSeriesAddRating = async (
@@ -5159,8 +5159,8 @@ export const getTvSeriesDeleteRatingUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/rating?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/rating`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/rating?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/rating`;
 };
 
 export const tvSeriesDeleteRating = async (
@@ -5205,8 +5205,8 @@ export const getTvSeasonDetailsUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}`;
 };
 
 export const tvSeasonDetails = async (
@@ -5252,8 +5252,8 @@ export const getTvSeasonAccountStatesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/account_states?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/account_states`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/account_states?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/account_states`;
 };
 
 export const tvSeasonAccountStates = async (
@@ -5302,8 +5302,8 @@ export const getTvSeasonAggregateCreditsUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/aggregate_credits?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/aggregate_credits`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/aggregate_credits?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/aggregate_credits`;
 };
 
 export const tvSeasonAggregateCredits = async (
@@ -5348,8 +5348,8 @@ export const getTvSeasonChangesByIdUrl = (seasonId: number, params?: TvSeasonCha
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/season/${seasonId}/changes?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/season/${seasonId}/changes`;
+    ? `https://api.themoviedb.org/3/tv/season/${seasonId}/changes?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/season/${seasonId}/changes`;
 };
 
 export const tvSeasonChangesById = async (
@@ -5393,8 +5393,8 @@ export const getTvSeasonCreditsUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/credits?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/credits`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/credits?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/credits`;
 };
 
 export const tvSeasonCredits = async (
@@ -5425,7 +5425,7 @@ export type tvSeasonExternalIdsResponseSuccess = tvSeasonExternalIdsResponse200 
 export type tvSeasonExternalIdsResponse = tvSeasonExternalIdsResponseSuccess;
 
 export const getTvSeasonExternalIdsUrl = (seriesId: number, seasonNumber: number) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/external_ids`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/external_ids`;
 };
 
 export const tvSeasonExternalIds = async (
@@ -5470,8 +5470,8 @@ export const getTvSeasonImagesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/images?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/images`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/images?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/images`;
 };
 
 export const tvSeasonImages = async (
@@ -5502,7 +5502,7 @@ export type tvSeasonTranslationsResponseSuccess = tvSeasonTranslationsResponse20
 export type tvSeasonTranslationsResponse = tvSeasonTranslationsResponseSuccess;
 
 export const getTvSeasonTranslationsUrl = (seriesId: number, seasonNumber: number) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/translations`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/translations`;
 };
 
 export const tvSeasonTranslations = async (
@@ -5550,8 +5550,8 @@ export const getTvSeasonVideosUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/videos?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/videos`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/videos?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/videos`;
 };
 
 export const tvSeasonVideos = async (
@@ -5597,8 +5597,8 @@ export const getTvSeasonWatchProvidersUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/watch/providers?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/watch/providers`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/watch/providers?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/watch/providers`;
 };
 
 export const tvSeasonWatchProviders = async (
@@ -5648,8 +5648,8 @@ export const getTvEpisodeDetailsUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}`;
 };
 
 export const tvEpisodeDetails = async (
@@ -5700,8 +5700,8 @@ export const getTvEpisodeAccountStatesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/account_states?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/account_states`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/account_states?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/account_states`;
 };
 
 export const tvEpisodeAccountStates = async (
@@ -5736,7 +5736,7 @@ export type tvEpisodeChangesByIdResponseSuccess = tvEpisodeChangesByIdResponse20
 export type tvEpisodeChangesByIdResponse = tvEpisodeChangesByIdResponseSuccess;
 
 export const getTvEpisodeChangesByIdUrl = (episodeId: number) => {
-  return `https://api.themoviedb.org/3/3/tv/episode/${episodeId}/changes`;
+  return `https://api.themoviedb.org/3/tv/episode/${episodeId}/changes`;
 };
 
 export const tvEpisodeChangesById = async (
@@ -5780,8 +5780,8 @@ export const getTvEpisodeCreditsUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/credits?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/credits`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/credits?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/credits`;
 };
 
 export const tvEpisodeCredits = async (
@@ -5820,7 +5820,7 @@ export const getTvEpisodeExternalIdsUrl = (
   seasonNumber: number,
   episodeNumber: string,
 ) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/external_ids`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/external_ids`;
 };
 
 export const tvEpisodeExternalIds = async (
@@ -5870,8 +5870,8 @@ export const getTvEpisodeImagesUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/images?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/images`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/images?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/images`;
 };
 
 export const tvEpisodeImages = async (
@@ -5910,7 +5910,7 @@ export const getTvEpisodeTranslationsUrl = (
   seasonNumber: number,
   episodeNumber: number,
 ) => {
-  return `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/translations`;
+  return `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/translations`;
 };
 
 export const tvEpisodeTranslations = async (
@@ -5960,8 +5960,8 @@ export const getTvEpisodeVideosUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/videos?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/videos`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/videos?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/videos`;
 };
 
 export const tvEpisodeVideos = async (
@@ -6012,8 +6012,8 @@ export const getTvEpisodeAddRatingUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/rating?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/rating`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/rating?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/rating`;
 };
 
 export const tvEpisodeAddRating = async (
@@ -6067,8 +6067,8 @@ export const getTvEpisodeDeleteRatingUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/rating?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/rating`;
+    ? `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/rating?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}/rating`;
 };
 
 export const tvEpisodeDeleteRating = async (
@@ -6103,7 +6103,7 @@ export type tvEpisodeGroupDetailsResponseSuccess = tvEpisodeGroupDetailsResponse
 export type tvEpisodeGroupDetailsResponse = tvEpisodeGroupDetailsResponseSuccess;
 
 export const getTvEpisodeGroupDetailsUrl = (tvEpisodeGroupId: string) => {
-  return `https://api.themoviedb.org/3/3/tv/episode_group/${tvEpisodeGroupId}`;
+  return `https://api.themoviedb.org/3/tv/episode_group/${tvEpisodeGroupId}`;
 };
 
 export const tvEpisodeGroupDetails = async (
@@ -6146,8 +6146,8 @@ export const getWatchProvidersAvailableRegionsUrl = (
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/watch/providers/regions?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/watch/providers/regions`;
+    ? `https://api.themoviedb.org/3/watch/providers/regions?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/watch/providers/regions`;
 };
 
 export const watchProvidersAvailableRegions = async (
@@ -6190,8 +6190,8 @@ export const getWatchProvidersMovieListUrl = (params?: WatchProvidersMovieListPa
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/watch/providers/movie?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/watch/providers/movie`;
+    ? `https://api.themoviedb.org/3/watch/providers/movie?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/watch/providers/movie`;
 };
 
 export const watchProvidersMovieList = async (
@@ -6231,8 +6231,8 @@ export const getWatchProviderTvListUrl = (params?: WatchProviderTvListParams) =>
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `https://api.themoviedb.org/3/3/watch/providers/tv?${stringifiedParams}`
-    : `https://api.themoviedb.org/3/3/watch/providers/tv`;
+    ? `https://api.themoviedb.org/3/watch/providers/tv?${stringifiedParams}`
+    : `https://api.themoviedb.org/3/watch/providers/tv`;
 };
 
 export const watchProviderTvList = async (

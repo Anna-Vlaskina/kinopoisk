@@ -1,4 +1,4 @@
-import type { MovieSection } from "@/shared/mocks/type";
+import type { MoviesCatalogSection } from "./MoviesCatalog.types";
 import { MovieRow } from "@/widgets/movie-row/MovieRow";
 import styles from "./MoviesCatalog.module.css";
 import { Text } from "@/shared/ui/text";
@@ -6,7 +6,7 @@ import type { FC } from "react";
 import clsx from "clsx";
 
 type Props = {
-  sections: MovieSection[];
+  sections: MoviesCatalogSection[];
 };
 
 export const MoviesCatalog: FC<Props> = ({ sections }) => {

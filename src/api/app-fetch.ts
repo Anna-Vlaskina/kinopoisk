@@ -26,7 +26,7 @@ const getUrl = (contextUrl: string): string => {
 
   const pathname = url.pathname;
   const search = url.search;
-  const baseUrl = "https://api.themoviedb.org/3";
+  const baseUrl = "https://api.themoviedb.org";
 
   const requestUrl = new URL(`${baseUrl}${pathname}${search}`);
 

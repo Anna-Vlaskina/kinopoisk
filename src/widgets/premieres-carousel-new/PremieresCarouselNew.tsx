@@ -1,20 +1,3 @@
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import type { FC } from 'react';
-// import { Navigation, EffectCreative  } from 'swiper/modules';
-// import { MoviePremiereCard } from '../movie-card/movie-premiere-card';
-// import type { Movie } from "@/shared/mocks/type";
-// import styles from "./PremieresCarouselNew.module.css";
-
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/effect-creative';
-
-// type MovieProps = {
-//   movies: Movie[];
-// };
-
-// export const PremieresCarouselNew: FC<MovieProps> = ({ movies }) => {
-//   return (
 //     <Swiper
 //       modules={[Navigation, EffectCreative]}
 //       navigation
@@ -29,17 +12,6 @@
 //           scale: 0.6,
 //         },
 //       }}
-//       slidesPerView={3}
-//       centeredSlides={false}
-//     >
-//       {movies.map((movie) => (
-//         <SwiperSlide key={movie.id} className={styles.slide}>
-//           <MoviePremiereCard movie={movie} />
-//         </SwiperSlide>
-//       ))}
-//     </Swiper>
-//   );
-// }
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";

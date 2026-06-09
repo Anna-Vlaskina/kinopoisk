@@ -10,7 +10,7 @@ export default defineConfig({
       target: "./src/api/api-client.ts",
       schemas: "./src/api/types",
       client: "fetch",
-      baseUrl: "https://api.themoviedb.org/3",
+      baseUrl: "https://api.themoviedb.org",
       override: {
         mutator: {
           path: "./src/api/app-fetch.ts",
