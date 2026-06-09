@@ -1,0 +1,1 @@
+export { CollectionTile } from "./CollectionTile";

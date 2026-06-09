@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Badge } from "@/shared/ui/badge";
+import { Badge } from "@/shared/ui/Badge";
 import { Text } from "@/shared/ui/text";
 import { Separator } from "@/shared/ui/separator";
 import styles from "./MovieMeta.module.css";

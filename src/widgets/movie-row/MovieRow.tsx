@@ -1,7 +1,7 @@
 import { useState, type FC } from "react";
 import { MovieCollectionCard } from "../movie-card/movie-collection-card";
 import styles from "./MovieRow.module.css";
-import type { Movie } from "@/shared/mocks/type";
+import type { Movie } from "@/entities/movie/model";
 import clsx from "clsx";
 
 type MovieProps = {

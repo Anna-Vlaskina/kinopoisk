@@ -1,4 +1,4 @@
-import type { Movie } from "@/shared/mocks/type";
+import type { Movie } from "@/entities/movie/model";
 
 export interface MovieCollectionCardProps {
   movie: Movie;
