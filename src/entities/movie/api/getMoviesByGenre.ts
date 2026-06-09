@@ -1,10 +1,7 @@
 import { discoverMovie } from "@/api/api-client";
+import { hasReadableTitle } from "../lib/hasReadableTitle";
 import type { Movie } from "../model/movie.types";
 import { mapMovie } from "./movie.mapper";
-
-const hasReadableTitle = (title: string): boolean => {
-  return /[A-Za-zА-Яа-яЁё]/.test(title);
-};
 
 export const getMoviesByGenre = async (
   genreId: number,

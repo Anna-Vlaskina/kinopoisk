@@ -21,16 +21,10 @@ export const getGenreNames = (genreIds: number[], genresMap: Map<number, string>
 
 export const mapMovie = (dto: MovieDto, genresMap: Map<number, string>): Movie => ({
   id: String(dto.id ?? ""),
-
   title: dto.title ?? "",
-
   posterUrl: getPosterUrl(dto.poster_path),
-
   rating: dto.vote_average ? Number(dto.vote_average.toFixed(1)) : undefined,
-
   type: "Фильм",
-
   genre: getGenreNames(dto.genre_ids ?? [], genresMap),
-
   premiereDate: dto.release_date ?? "",
 });
