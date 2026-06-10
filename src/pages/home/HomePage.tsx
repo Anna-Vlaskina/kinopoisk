@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import { HeroSection } from "@/widgets/hero-section";
-// import { PremieresCarousel } from "@/widgets/premieres-carousel";
-import { PremieresCarouselNew } from "@/widgets/premieres-carousel-new";
+import { PremieresCarousel } from "@/widgets/premieres-carousel";
 import { MoviesCatalog } from "@/widgets/movies-catalog";
+import { CollectionRow } from "@/widgets/collection-row";
 import { getMovieSections } from "@/widgets/movies-catalog/api/getMovieSections";
+import { getCollections } from "@/entities/collection/api/getCollections";
 import type { MoviesCatalogSection } from "@/widgets/movies-catalog/MoviesCatalog.types";
+import type { Collection } from "@/entities/collection/model/collection.types";
 import type { FC } from "react";
 import { mockMovies } from "@/shared/mocks/mockMovies";
 import styles from "./HomePage.module.css";
@@ -15,20 +17,20 @@ import clsx from "clsx";
 export const HomePage: FC = () => {
   const [sections, setSections] = useState<MoviesCatalogSection[]>([]);
   const [loading, setLoading] = useState(true);
+  const [collections, setCollections] = useState<Collection[]>([]);
 
   useEffect(() => {
     const load = async () => {
       try {
         const data = await getMovieSections();
-
-        console.log("sections", sections);
-
         setSections(data);
+
+        const collectionsData = await getCollections();
+        setCollections(collectionsData);
       } finally {
         setLoading(false);
       }
     };
-
     load();
   }, []);
 
@@ -42,10 +44,10 @@ export const HomePage: FC = () => {
       <main className={clsx(styles.catalog)}>
         <section className={clsx(styles.hero)}>
           <HeroSection></HeroSection>
-          {/*<PremieresCarousel movies={mockMovies}></PremieresCarousel>*/}
-          <PremieresCarouselNew movies={mockMovies}></PremieresCarouselNew>
+          <PremieresCarousel movies={mockMovies}></PremieresCarousel>
         </section>
         <MoviesCatalog sections={sections}></MoviesCatalog>
+        <CollectionRow collections={collections}></CollectionRow>
       </main>
       <Footer></Footer>
     </div>
