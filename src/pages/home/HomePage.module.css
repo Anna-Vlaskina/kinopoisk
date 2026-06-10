@@ -13,8 +13,8 @@
 .hero {
   display: flex;
   flex-direction: row;
-  gap: 200px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .catalog {

@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import { HeroSection } from "@/widgets/hero-section";
-import { PremieresCarousel } from "@/widgets/premieres-carousel";
-// import { PremieresCarouselNew } from "@/widgets/premieres-carousel-new";
+// import { PremieresCarousel } from "@/widgets/premieres-carousel";
+import { PremieresCarouselNew } from "@/widgets/premieres-carousel-new";
 import { MoviesCatalog } from "@/widgets/movies-catalog";
 import { getMovieSections } from "@/widgets/movies-catalog/api/getMovieSections";
 import type { MoviesCatalogSection } from "@/widgets/movies-catalog/MoviesCatalog.types";
@@ -42,8 +42,8 @@ export const HomePage: FC = () => {
       <main className={clsx(styles.catalog)}>
         <section className={clsx(styles.hero)}>
           <HeroSection></HeroSection>
-          <PremieresCarousel movies={mockMovies}></PremieresCarousel>
-          {/* <PremieresCarouselNew movies={mockMovies}></PremieresCarouselNew> */}
+          {/*<PremieresCarousel movies={mockMovies}></PremieresCarousel>*/}
+          <PremieresCarouselNew movies={mockMovies}></PremieresCarouselNew>
         </section>
         <MoviesCatalog sections={sections}></MoviesCatalog>
       </main>
