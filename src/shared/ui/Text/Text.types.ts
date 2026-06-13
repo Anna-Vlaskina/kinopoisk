@@ -9,7 +9,8 @@ type FontSize =
   | "lg" // 20px
   | "xl" // 24px
   | "2xl" // 32px
-  | "3xl"; // 48px
+  | "3xl" // 48px
+  | "4xl"; // 72px
 
 type WeightVariant =
   | "regular" // 400

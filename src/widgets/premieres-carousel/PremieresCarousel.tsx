@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCreative } from "swiper/modules";
 import { Navigation } from "swiper/modules";
-import type { Movie } from "@/shared/mocks/type";
+import type { PremiereMovie } from "@/entities/movie/model/premiere-movie.types";
 import type { FC } from "react";
 import { MoviePremiereCard } from "../movie-card/movie-premiere-card";
 import clsx from "clsx";
@@ -11,7 +11,7 @@ import "@/shared/lib/swiper/styles";
 import styles from "./PremieresCarousel.module.css";
 
 type MovieProps = {
-  movies: Movie[];
+  movies: PremiereMovie[];
 };
 
 const Z_AXIS_DEPH = -436;

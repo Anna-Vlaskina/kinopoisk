@@ -7,7 +7,7 @@ import type { MovieMetaProps } from "./MovieMeta.types";
 import clsx from "clsx";
 
 export const MovieMeta: FC<MovieMetaProps> = (props) => {
-  const { rating, type, genre } = props;
+  const { rating, type, genre, date, country, runtime, color = "secondary" } = props;
 
   return (
     <div className={clsx(styles.meta)}>
@@ -20,7 +20,7 @@ export const MovieMeta: FC<MovieMetaProps> = (props) => {
           <Text
             tag="span"
             size="md"
-            color="secondary"
+            color={color}
           >
             {type}
           </Text>
@@ -34,9 +34,51 @@ export const MovieMeta: FC<MovieMetaProps> = (props) => {
           <Text
             tag="span"
             size="md"
-            color="secondary"
+            color={color}
           >
             {genre}
+          </Text>
+        </>
+      )}
+
+      {date && (
+        <>
+          <Separator />
+
+          <Text
+            tag="span"
+            size="md"
+            color={color}
+          >
+            {date}
+          </Text>
+        </>
+      )}
+
+      {country && (
+        <>
+          <Separator />
+
+          <Text
+            tag="span"
+            size="md"
+            color={color}
+          >
+            {country}
+          </Text>
+        </>
+      )}
+
+      {runtime && (
+        <>
+          <Separator />
+
+          <Text
+            tag="span"
+            size="md"
+            color={color}
+          >
+            {runtime}
           </Text>
         </>
       )}
