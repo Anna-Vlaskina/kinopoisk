@@ -2,12 +2,15 @@ import type { FC } from "react";
 import { Badge } from "@/shared/ui/Badge";
 import { Text } from "@/shared/ui/text";
 import { Separator } from "@/shared/ui/separator";
+import { formatRuntime } from "@/shared/lib/formatters/formatRuntime";
 import styles from "./MovieMeta.module.css";
 import type { MovieMetaProps } from "./MovieMeta.types";
 import clsx from "clsx";
 
 export const MovieMeta: FC<MovieMetaProps> = (props) => {
   const { rating, type, genre, date, country, runtime, color = "secondary" } = props;
+
+  const year = date?.slice(0, 4);
 
   return (
     <div className={clsx(styles.meta)}>
@@ -27,7 +30,7 @@ export const MovieMeta: FC<MovieMetaProps> = (props) => {
         </>
       )}
 
-      {genre && (
+      {(year || genre) && (
         <>
           <Separator />
 
@@ -36,21 +39,7 @@ export const MovieMeta: FC<MovieMetaProps> = (props) => {
             size="md"
             color={color}
           >
-            {genre}
-          </Text>
-        </>
-      )}
-
-      {date && (
-        <>
-          <Separator />
-
-          <Text
-            tag="span"
-            size="md"
-            color={color}
-          >
-            {date}
+            {[year, genre].filter(Boolean).join(", ")}
           </Text>
         </>
       )}
@@ -78,7 +67,7 @@ export const MovieMeta: FC<MovieMetaProps> = (props) => {
             size="md"
             color={color}
           >
-            {runtime}
+            {formatRuntime(runtime)}
           </Text>
         </>
       )}

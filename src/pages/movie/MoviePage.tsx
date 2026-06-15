@@ -1,0 +1,22 @@
+import { useParams } from "react-router-dom";
+import { MovieHeroSection } from "@/widgets/movie-hero-section";
+import { Footer } from "@/widgets/footer";
+import type { FC } from "react";
+import styles from "./MoviePage.module.css";
+import clsx from "clsx";
+
+export const MoviePage: FC = () => {
+  const { movieId } = useParams();
+
+  if (!movieId) {
+    return null;
+  }
+
+  return (
+    <div className={clsx(styles.page)}>
+      <MovieHeroSection movieId={Number(movieId)}></MovieHeroSection>
+      <main></main>
+      <Footer></Footer>
+    </div>
+  );
+};
