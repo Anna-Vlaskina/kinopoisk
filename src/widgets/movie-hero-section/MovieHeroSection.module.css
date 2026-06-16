@@ -6,13 +6,10 @@
 .backdrop {
   position: absolute;
   inset: 0;
-  left: 50%;
   z-index: 0;
-  width: 100vw;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transform: translateX(-50%);
 }
 
 .content {
