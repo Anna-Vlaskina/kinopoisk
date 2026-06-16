@@ -1,10 +1,10 @@
+import { format } from "date-fns";
+import { ru } from "date-fns/locale";
+
 export const formatPremiereDate = (date?: string): string => {
   if (!date) {
     return "";
   }
 
-  return new Intl.DateTimeFormat("ru-RU", {
-    day: "numeric",
-    month: "long",
-  }).format(new Date(date));
+  return format(new Date(date), "d MMMM", { locale: ru });
 };

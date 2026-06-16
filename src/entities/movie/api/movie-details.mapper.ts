@@ -1,11 +1,8 @@
 import type { MovieDetails200 } from "@/api/types";
-
+import { getBackdropUrl } from "../lib/getBackdropUrl";
+import { formatCountry } from "@/shared/lib/formatters/formatCountry";
 import type { MovieDetails } from "../model/movie-details.types";
 import { getPosterUrl } from "../lib/getPosterUrl";
-
-const BACKDROP_BASE_URL = "https://image.tmdb.org/t/p/original";
-
-const regionNames = new Intl.DisplayNames(["ru"], { type: "region" });
 
 export const mapMovieDetails = (dto: MovieDetails200): MovieDetails => ({
   id: String(dto.id ?? ""),
@@ -22,15 +19,13 @@ export const mapMovieDetails = (dto: MovieDetails200): MovieDetails => ({
       .slice(0, 2)
       .join(", ") ?? "",
 
-  country: dto.production_countries?.map(
-    (country) => regionNames.of(country.iso_3166_1 ?? "") ?? "",
-  ),
+  country: dto.production_countries?.map((country) => formatCountry(country.iso_3166_1)),
 
   runtime: dto.runtime,
 
   posterUrl: getPosterUrl(dto.poster_path),
 
-  backdropUrl: dto.backdrop_path ? `${BACKDROP_BASE_URL}${dto.backdrop_path}` : "",
+  backdropUrl: getBackdropUrl(dto.backdrop_path),
 
   overview: dto.overview ?? "",
 });

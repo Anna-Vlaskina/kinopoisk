@@ -1,9 +1,8 @@
 import type { MovieInfo } from "../model/movie-info.types";
+import { formatCountry } from "@/shared/lib/formatters/formatCountry";
 import type { MovieDetails200 } from "@/api/types";
 import type { MovieCredits200 } from "@/api/types";
 import type { MovieExternalIds200 } from "@/api/types";
-
-const regionNames = new Intl.DisplayNames(["ru"], { type: "region" });
 
 export const mapMovieInfo = (
   details: MovieDetails200,
@@ -22,9 +21,7 @@ export const mapMovieInfo = (
 
   countries:
     details.production_countries?.map((country) =>
-      country.iso_3166_1
-        ? (regionNames.of(country.iso_3166_1) ?? country.name ?? "")
-        : (country.name ?? ""),
+      formatCountry(country.iso_3166_1, country.name),
     ) ?? [],
 
   runtime: details.runtime,
