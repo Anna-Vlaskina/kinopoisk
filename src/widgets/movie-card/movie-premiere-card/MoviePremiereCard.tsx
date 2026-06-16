@@ -17,7 +17,7 @@ export const MoviePremiereCard: FC<MoviePremiereCardProps> = (props) => {
         variant="vertical"
       />
 
-      <MovieTitle title={movie.season ? `${movie.title}, ${movie.season}` : movie.title} />
+      <MovieTitle title={movie.title} />
 
       <div className={clsx(styles.premier)}>
         <Badge variant="default">Премьера</Badge>

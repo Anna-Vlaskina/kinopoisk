@@ -1,14 +1,19 @@
 import { Poster } from "@/shared/ui/poster";
 import { Text } from "@/shared/ui/text";
 import type { FC } from "react";
+import type { Collection } from "@/entities/collection/model/collection.types";
 import styles from "./CollectionTile.module.css";
 import clsx from "clsx";
 
-export const CollectionTile: FC = () => {
+type Props = {
+  collection: Collection;
+};
+
+export const CollectionTile: FC<Props> = ({ collection }) => {
   return (
     <div className={clsx(styles.tile)}>
       <Poster
-        src="https://i.pinimg.com/736x/5d/80/b7/5d80b7b63f8b10cf9b57a410c1ef2b4e.jpg"
+        src={collection.posterUrl}
         variant="square"
       >
         <Text
@@ -18,7 +23,7 @@ export const CollectionTile: FC = () => {
           lineHeight="relaxed"
           className={clsx(styles.text)}
         >
-          Любителям комиксов
+          {collection.title}
         </Text>
       </Poster>
     </div>

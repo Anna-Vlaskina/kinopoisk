@@ -5,3 +5,9 @@
   padding-bottom: 40px;
   border-bottom: 1px solid var(--color-white-lightest);
 }
+
+.link {
+  align-self: center;
+  text-decoration: none;
+  cursor: pointer;
+}

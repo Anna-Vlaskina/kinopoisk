@@ -1,0 +1,12 @@
+.item {
+  display: flex;
+  gap: 50px;
+}
+
+.term {
+  width: 155px;
+}
+
+.description {
+  width: 255px;
+}

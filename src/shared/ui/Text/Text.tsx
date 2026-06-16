@@ -24,6 +24,7 @@ export const Text: FC<TextProps> = (props) => {
     xl: styles["text-xl"],
     "2xl": styles["text-2xl"],
     "3xl": styles["text-3xl"],
+    "4xl": styles["text-4xl"],
   };
 
   const lineHeightClasses = {

@@ -3,7 +3,7 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: fit-content;
   height: 55px;
   padding: 18px;
   color: var(--color-white-primary);
@@ -13,7 +13,7 @@
 }
 
 .icon {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .filled {
@@ -23,7 +23,6 @@
 .outlined {
   background-color: transparent;
   border-color: var(--color-white-primary);
-  opacity: 0.8;
 }
 
 .only-icon {
@@ -31,7 +30,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
   height: fit-content;
   padding: 0;
   margin: 0;

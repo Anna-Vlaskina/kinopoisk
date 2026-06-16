@@ -1,6 +1,19 @@
 import React from "react";
 
-type TagVariant = "p" | "span" | "div" | "label" | "li" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+type TagVariant =
+  | "p"
+  | "span"
+  | "div"
+  | "label"
+  | "li"
+  | "h1"
+  | "h2"
+  | "h3"
+  | "h4"
+  | "h5"
+  | "h6"
+  | "dt"
+  | "dd";
 
 type FontSize =
   | "xs" // 12px
@@ -9,7 +22,8 @@ type FontSize =
   | "lg" // 20px
   | "xl" // 24px
   | "2xl" // 32px
-  | "3xl"; // 48px
+  | "3xl" // 48px
+  | "4xl"; // 72px
 
 type WeightVariant =
   | "regular" // 400

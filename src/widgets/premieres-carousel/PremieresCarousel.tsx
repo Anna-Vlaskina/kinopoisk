@@ -1,63 +1,52 @@
-import { useState, type FC } from "react";
+import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCreative } from "swiper/modules";
+import { Navigation } from "swiper/modules";
+import type { PremiereMovie } from "@/entities/movie/model/premiere-movie.types";
+import { getUpcomingMovies } from "@/entities/movie/api/getUpcomingMovies";
+import type { FC } from "react";
 import { MoviePremiereCard } from "../movie-card/movie-premiere-card";
-import styles from "./PremieresCarousel.module.css";
-import type { Movie } from "@/shared/mocks/type";
 import clsx from "clsx";
 
-type MovieProps = {
-  movies: Movie[];
-};
+import "@/shared/lib/swiper/styles";
 
-export const PremieresCarousel: FC<MovieProps> = ({ movies }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+import styles from "./PremieresCarousel.module.css";
 
-  const prev = () => {
-    setActiveIndex((current) => (current === 0 ? movies.length - 1 : current - 1));
-  };
+const Z_AXIS_DEPH = -436;
+const MOVE_PERCENTAGE = "92%";
 
-  const next = () => {
-    setActiveIndex((current) => (current + 1) % movies.length);
-  };
+export const PremieresCarousel: FC = () => {
+  const [premieres, setPremieres] = useState<PremiereMovie[]>([]);
 
-  const getPosition = (index: number) => {
-    const length = movies.length;
-
-    const second = (activeIndex + 1) % length;
-    const third = (activeIndex + 2) % length;
-
-    if (index === activeIndex) return "active";
-    if (index === second) return "second";
-    if (index === third) return "third";
-
-    return "hidden";
-  };
+  useEffect(() => {
+    getUpcomingMovies().then(setPremieres);
+  }, []);
 
   return (
-    <div className={clsx(styles.root)}>
-      <button
-        className={clsx(styles.prev)}
-        onClick={prev}
+    <div className={styles.viewport}>
+      <Swiper
+        className={clsx(styles.slider)}
+        modules={[Navigation, EffectCreative]}
+        effect={"creative"}
+        slidesPerView={"auto"}
+        grabCursor
+        loop
+        creativeEffect={{
+          limitProgress: 3,
+          perspective: true,
+          prev: { translate: [`-${MOVE_PERCENTAGE}`, 0, Z_AXIS_DEPH] },
+          next: { translate: [MOVE_PERCENTAGE, 0, Z_AXIS_DEPH] },
+        }}
       >
-        ←
-      </button>
-
-      <div className={clsx(styles.container)}>
-        {movies.map((movie, index) => (
-          <div
-            key={movie.id}
-            className={clsx(styles.slide, styles[getPosition(index)])}
+        {premieres.map((premiere) => (
+          <SwiperSlide
+            key={premiere.id}
+            className={clsx(styles.slide)}
           >
-            <MoviePremiereCard movie={movie} />
-          </div>
+            <MoviePremiereCard movie={premiere} />
+          </SwiperSlide>
         ))}
-      </div>
-
-      <button
-        className={clsx(styles.next)}
-        onClick={next}
-      >
-        →
-      </button>
+      </Swiper>
     </div>
   );
 };

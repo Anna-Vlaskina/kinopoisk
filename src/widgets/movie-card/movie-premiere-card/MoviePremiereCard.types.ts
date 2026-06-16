@@ -1,5 +1,5 @@
-import type { Movie } from "@/shared/mocks/type";
+import type { PremiereMovie } from "@/entities/movie/model/premiere-movie.types";
 
 export interface MoviePremiereCardProps {
-  movie: Movie;
+  movie: PremiereMovie;
 }

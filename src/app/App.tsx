@@ -1,7 +1,5 @@
-import { HomePage } from "@/pages/home";
+import { AppRouter } from "./routing/AppRouter";
 
-function App() {
-  return <HomePage></HomePage>;
-}
-
-export default App;
+export const App = () => {
+  return <AppRouter />;
+};
