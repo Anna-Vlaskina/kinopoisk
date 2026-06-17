@@ -1,9 +1,13 @@
+import type { FC } from "react";
+
+import clsx from "clsx";
+
 import { Poster } from "@/shared/ui/poster";
 import { Text } from "@/shared/ui/text";
-import type { FC } from "react";
+
 import type { Collection } from "@/entities/collection/model/collection.types";
+
 import styles from "./CollectionTile.module.css";
-import clsx from "clsx";
 
 type Props = {
   collection: Collection;

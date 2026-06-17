@@ -1,1 +1,0 @@
-export { MovieHeroSection } from "./MovieHeroSection";

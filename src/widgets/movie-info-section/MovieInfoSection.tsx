@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, type FC } from "react";
+
+import clsx from "clsx";
+
+import { formatRuntime } from "@/shared/lib/formatters/formatRuntime";
+
 import type { MovieInfo } from "@/entities/movie/model/movie-info.types";
 import { getMovieInfo } from "@/entities/movie/api/getMovieInfo";
-import { formatRuntime } from "@/shared/lib/formatters/formatRuntime";
-import type { FC } from "react";
-import { MovieInfoItem } from "../movie-info-item/MovieInfoItem";
-import clsx from "clsx";
+
+import { MovieInfoItem } from "./MovieInfoItem";
 
 import styles from "./MovieInfoSection.module.css";
 

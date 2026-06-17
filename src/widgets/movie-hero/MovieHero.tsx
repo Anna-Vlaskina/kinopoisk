@@ -1,12 +1,16 @@
-import { MovieHeroHeader } from "../movie-hero-header";
-import { MovieMeta } from "@/entities/movie/ui/movie-meta";
-import type { MovieDetails } from "@/entities/movie/model/movie-details.types";
-import { Button } from "@/shared/ui/Button";
+import type { FC } from "react";
+
+import clsx from "clsx";
+
+import { Button } from "@/shared/ui/button";
 import Triangle from "@/shared/assets/icons/triangle.svg?react";
 import FilePlus from "@/shared/assets/icons/file-plus.svg?react";
 import Heart from "@/shared/assets/icons/heart.svg?react";
-import type { FC } from "react";
-import clsx from "clsx";
+
+import { MovieMeta } from "@/entities/movie/ui/movie-meta";
+import type { MovieDetails } from "@/entities/movie/model/movie-details.types";
+
+import { MovieHeroHeader } from "./MovieHeroHeader";
 
 import styles from "./MovieHero.module.css";
 

@@ -1,11 +1,15 @@
 import type { FC } from "react";
+
+import clsx from "clsx";
 import { Link } from "react-router-dom";
+
 import { MovieMeta } from "@/entities/movie/ui/movie-meta";
 import { MoviePoster } from "@/entities/movie/ui/movie-poster";
 import { MovieTitle } from "@/entities/movie/ui/movie-title";
-import styles from "./MovieCollectionCard.module.css";
+
 import type { MovieCollectionCardProps } from "./MovieCollectionCard.types";
-import clsx from "clsx";
+
+import styles from "./MovieCollectionCard.module.css";
 
 export const MovieCollectionCard: FC<MovieCollectionCardProps> = ({ movie }) => {
   return (

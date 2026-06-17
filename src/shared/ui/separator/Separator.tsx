@@ -1,6 +1,8 @@
 import type { FC } from "react";
-import styles from "./Separator.module.css";
+
 import clsx from "clsx";
+
+import styles from "./Separator.module.css";
 
 interface SeparatorProps {
   variant?: "primary" | "secondary";

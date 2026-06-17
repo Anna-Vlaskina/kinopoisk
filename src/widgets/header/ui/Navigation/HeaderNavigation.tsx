@@ -1,6 +1,8 @@
 import type { FC } from "react";
-import styles from "./HeaderNavigation.module.css";
+
 import clsx from "clsx";
+
+import styles from "./HeaderNavigation.module.css";
 
 const headerNavigationItems = ["Фильмы", "Сериалы", "Подборки"];
 

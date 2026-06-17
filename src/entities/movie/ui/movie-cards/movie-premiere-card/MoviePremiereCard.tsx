@@ -1,10 +1,15 @@
 import type { FC } from "react";
-import type { MoviePremiereCardProps } from "./MoviePremiereCard.types";
+
+import clsx from "clsx";
+
+import { Badge } from "@/shared/ui/badge";
+
 import { MoviePoster } from "@/entities/movie/ui/movie-poster";
 import { MovieTitle } from "@/entities/movie/ui/movie-title";
-import { Badge } from "@/shared/ui/Badge";
+
+import type { MoviePremiereCardProps } from "./MoviePremiereCard.types";
+
 import styles from "./MoviePremiereCard.module.css";
-import clsx from "clsx";
 
 export const MoviePremiereCard: FC<MoviePremiereCardProps> = (props) => {
   const { movie } = props;

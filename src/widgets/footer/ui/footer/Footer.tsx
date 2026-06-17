@@ -1,9 +1,13 @@
 import type { FC } from "react";
-import styles from "./Footer.module.css";
-import { Logo } from "@/shared/ui/Logo";
-import { FooterNavigation } from "../navigation";
-import { Text } from "@/shared/ui/Text";
+
 import clsx from "clsx";
+
+import { Logo } from "@/shared/ui/logo";
+import { Text } from "@/shared/ui/text";
+
+import { FooterNavigation } from "../navigation";
+
+import styles from "./Footer.module.css";
 
 export const Footer: FC = () => {
   return (

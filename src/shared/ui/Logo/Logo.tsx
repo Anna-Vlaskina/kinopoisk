@@ -1,6 +1,8 @@
 import type { FC } from "react";
-import styles from "./logo.module.css";
+
 import clsx from "clsx";
+
+import styles from "./logo.module.css";
 
 export const Logo: FC = () => {
   return (

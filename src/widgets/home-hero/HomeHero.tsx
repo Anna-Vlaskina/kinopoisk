@@ -1,10 +1,13 @@
-import styles from "./HeroSection.module.css";
-import { Text } from "@/shared/ui/text";
-import { Button } from "@/shared/ui/button";
 import type { FC } from "react";
+
 import clsx from "clsx";
 
-export const HeroSection: FC = () => {
+import { Text } from "@/shared/ui/text";
+import { Button } from "@/shared/ui/button";
+
+import styles from "./HomeHero.module.css";
+
+export const HomeHero: FC = () => {
   return (
     <section className={clsx(styles.section)}>
       <Text

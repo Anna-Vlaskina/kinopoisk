@@ -1,6 +1,9 @@
-import clsx from "clsx";
 import type { FC } from "react";
+
+import clsx from "clsx";
+
 import type { TextProps } from "./Text.types";
+
 import styles from "./Text.module.css";
 
 export const Text: FC<TextProps> = (props) => {

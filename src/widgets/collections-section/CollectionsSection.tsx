@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
 import type { FC } from "react";
+
 import clsx from "clsx";
-import { CardRow } from "@/widgets/card-row";
+
+import { CardRow } from "@/shared/ui/card-row";
 import { Text } from "@/shared/ui/text";
-import { CollectionTile } from "../collection-tile";
+
+import { CollectionTile } from "@/entities/collection/ui/collection-tile";
 import type { Collection } from "@/entities/collection/model/collection.types";
 import { getCollections } from "@/entities/collection/api/getCollections";
-import styles from "./CollectionRow.module.css";
 
-export const CollectionRow: FC = () => {
+import styles from "./CollectionsSection.module.css";
+
+export const CollectionsSection: FC = () => {
   const [collections, setCollections] = useState<Collection[]>([]);
 
   useEffect(() => {

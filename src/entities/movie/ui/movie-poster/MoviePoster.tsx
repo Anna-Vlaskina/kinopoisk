@@ -1,7 +1,9 @@
 import type { FC } from "react";
+
 import { Poster } from "@/shared/ui/poster";
-import type { MoviePosterProps } from "./MoviePoster.types";
 import fallbackPoster from "@/shared/assets/images/movie-placeholder.png";
+
+import type { MoviePosterProps } from "./MoviePoster.types";
 
 const FALLBACK_POSTER = fallbackPoster;
 

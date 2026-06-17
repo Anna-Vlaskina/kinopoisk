@@ -1,6 +1,9 @@
 import { useState } from "react";
+
 import clsx from "clsx";
+
 import type { CardRowProps } from "./CardRow.types";
+
 import styles from "./CardRow.module.css";
 
 export const CardRow = <T,>(props: CardRowProps<T>) => {

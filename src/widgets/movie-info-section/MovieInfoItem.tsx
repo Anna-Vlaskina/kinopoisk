@@ -1,7 +1,9 @@
 import type { FC } from "react";
-import { Text } from "@/shared/ui/Text";
-import { Badge } from "@/shared/ui/Badge";
+
 import clsx from "clsx";
+
+import { Text } from "@/shared/ui/text";
+import { Badge } from "@/shared/ui/badge";
 
 import styles from "./MovieInfoItem.module.css";
 

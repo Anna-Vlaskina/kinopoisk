@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCreative } from "swiper/modules";
-import { Navigation } from "swiper/modules";
-import type { PremiereMovie } from "@/entities/movie/model/premiere-movie.types";
-import { getUpcomingMovies } from "@/entities/movie/api/getUpcomingMovies";
-import type { FC } from "react";
-import { MoviePremiereCard } from "../movie-card/movie-premiere-card";
+import { useState, useEffect, type FC } from "react";
+
 import clsx from "clsx";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCreative, Navigation } from "swiper/modules";
 
 import "@/shared/lib/swiper/styles";
+
+import type { PremiereMovie } from "@/entities/movie/model/premiere-movie.types";
+import { getUpcomingMovies } from "@/entities/movie/api/getUpcomingMovies";
+import { MoviePremiereCard } from "@/entities/movie/ui/movie-cards";
 
 import styles from "./PremieresCarousel.module.css";
 

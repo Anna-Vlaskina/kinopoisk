@@ -1,7 +1,10 @@
 import type { FC } from "react";
-import type { BadgeProps } from "./Badge.types";
-import styles from "./Badge.module.css";
+
 import clsx from "clsx";
+
+import type { BadgeProps } from "./Badge.types";
+
+import styles from "./Badge.module.css";
 
 export const Badge: FC<BadgeProps> = (props) => {
   const { children, variant = "default" } = props;

@@ -1,7 +1,10 @@
-import type { PosterProps } from "./Poster.types";
 import type { FC } from "react";
-import styles from "./Poster.module.css";
+
 import clsx from "clsx";
+
+import type { PosterProps } from "./Poster.types";
+
+import styles from "./Poster.module.css";
 
 export const Poster: FC<PosterProps> = (props) => {
   const { src, alt, variant = "horizontal", children } = props;

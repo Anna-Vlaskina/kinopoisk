@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FC } from "react";
+
+import clsx from "clsx";
+
+import { Text } from "@/shared/ui/text";
+
 import { getMovieDetails } from "@/entities/movie/api/getMovieDetails";
-import { Text } from "@/shared/ui/Text";
 import type { MovieDetails } from "@/entities/movie/model/movie-details.types";
-import type { FC } from "react";
 
 import styles from "./MovieOverview.module.css";
-import clsx from "clsx";
 
 type Props = {
   movieId: number;

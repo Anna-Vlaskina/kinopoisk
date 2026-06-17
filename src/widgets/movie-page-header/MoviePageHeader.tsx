@@ -1,17 +1,20 @@
 import { type FC, useState, useEffect } from "react";
-import { Header } from "../header";
-import { MovieHero } from "../movie-hero/movie-hero";
-import type { MovieDetails } from "@/entities/movie/model/movie-details.types";
-import { getMovieDetails } from "@/entities/movie/api/getMovieDetails";
+
 import clsx from "clsx";
 
-import styles from "./MovieHeroSection.module.css";
+import type { MovieDetails } from "@/entities/movie/model/movie-details.types";
+import { getMovieDetails } from "@/entities/movie/api/getMovieDetails";
+
+import { Header } from "../header";
+import { MovieHero } from "../movie-hero/MovieHero";
+
+import styles from "./MoviePageHeader.module.css";
 
 type Props = {
   movieId: number;
 };
 
-export const MovieHeroSection: FC<Props> = ({ movieId }) => {
+export const MoviePageHeader: FC<Props> = ({ movieId }) => {
   const [movie, setMovie] = useState<MovieDetails | null>(null);
 
   useEffect(() => {
