@@ -1,6 +1,6 @@
 import { collectionDetails } from "@/api/api-client";
 
-import { mapCollection } from "./collection.mapper";
+import { mapCollection } from "../mapper/collection.mapper";
 import type { Collection } from "../model/collection.types";
 
 const COLLECTION_IDS = [10, 119, 1241, 230, 295, 528, 645, 748, 328, 9485, 86311];

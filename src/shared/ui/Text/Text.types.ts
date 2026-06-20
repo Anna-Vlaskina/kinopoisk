@@ -36,7 +36,8 @@ type ColorVariant =
   | "primary" // 100%
   | "secondary" // 50%
   | "tertiary" // 35%
-  | "disabled"; // 20%
+  | "disabled" // 20%
+  | "accent"; // акцентный
 
 type LineHeightVariant =
   | "tight" // 1

@@ -77,6 +77,10 @@
   color: var(--color-white-disabled);
 }
 
+.accent {
+  color: var(--color-accent);
+}
+
 /* lineHeight */
 
 .line-height-tight {

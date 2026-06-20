@@ -7,6 +7,7 @@ import { MoviePageHeader } from "@/widgets/movie-page-header";
 import { Footer } from "@/widgets/footer";
 import { MovieInfoSection } from "@/widgets/movie-info-section";
 import { MovieOverview } from "@/widgets/movie-overview";
+import { MovieReviewSection } from "@/widgets/movie-reviews-section";
 
 import styles from "./MoviePage.module.css";
 
@@ -23,6 +24,7 @@ export const MoviePage: FC = () => {
       <main>
         <MovieOverview movieId={Number(movieId)}></MovieOverview>
         <MovieInfoSection movieId={Number(movieId)}></MovieInfoSection>
+        <MovieReviewSection movieId={Number(movieId)}></MovieReviewSection>
       </main>
       <Footer></Footer>
     </div>
