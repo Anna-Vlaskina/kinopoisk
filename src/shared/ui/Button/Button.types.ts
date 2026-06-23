@@ -1,6 +1,6 @@
 import React from "react";
 
-type ButtonVariant = "filled" | "outlined" | "only-icon";
+type ButtonVariant = "filled" | "outlined" | "only-icon" | "accent-text";
 type ButtonHTMLType = "button" | "submit" | "reset";
 
 export interface ButtonProps {

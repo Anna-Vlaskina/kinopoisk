@@ -7,17 +7,18 @@ import { ReviewCard } from "@/entities/review/ui";
 import type { Review } from "@/entities/review/model/review.types";
 import { getMovieReviews } from "@/entities/review/api/getMovieReviews";
 
+import { ReviewCreateForm } from "@/features/review-create/ui/ReviewCreateForm";
+
 type Props = {
   movieId: number;
 };
 
 export const MovieReviewSection: FC<Props> = ({ movieId }) => {
   const [reviews, setReviews] = useState<Review[]>([]);
+  const [isEditorOpen, setIsEditorOpen] = useState(false);
 
   useEffect(() => {
-    getMovieReviews(movieId).then((reviews) => {
-      setReviews(reviews);
-    });
+    getMovieReviews(movieId).then(setReviews);
   }, [movieId]);
 
   return (
@@ -31,15 +32,20 @@ export const MovieReviewSection: FC<Props> = ({ movieId }) => {
           {reviews.length === 0 ? "Рецензий пока нет" : "Рецензии"}
         </Text>
 
-        <Text
-          tag="span"
-          size="sm"
-          weight="regular"
-          color="accent"
+        <Button
+          variant="accent-text"
+          onClick={() => setIsEditorOpen(true)}
         >
           Написать рецензию
-        </Text>
+        </Button>
       </div>
+
+      {isEditorOpen && (
+        <ReviewCreateForm
+          movieId={movieId}
+          onClose={() => setIsEditorOpen(false)}
+        />
+      )}
 
       {reviews.length !== 0 && (
         <>

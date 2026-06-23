@@ -56,4 +56,6 @@ export interface TextProps {
   lineHeight?: LineHeightVariant;
   className?: string;
   children: React.ReactNode;
+  onClick?: () => void;
+  style?: React.CSSProperties;
 }
