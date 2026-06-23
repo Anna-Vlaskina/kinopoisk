@@ -15,12 +15,10 @@ export const MovieReviewSection: FC<Props> = ({ movieId }) => {
   const [reviews, setReviews] = useState<Review[]>([]);
 
   useEffect(() => {
-    getMovieReviews(movieId).then(setReviews);
+    getMovieReviews(movieId).then((reviews) => {
+      setReviews(reviews);
+    });
   }, [movieId]);
-
-  if (reviews.length === 0) {
-    return "Рецензий пока нет";
-  }
 
   return (
     <div>
@@ -30,7 +28,7 @@ export const MovieReviewSection: FC<Props> = ({ movieId }) => {
           size="2xl"
           weight="bold"
         >
-          Рецензии
+          {reviews.length === 0 ? "Рецензий пока нет" : "Рецензии"}
         </Text>
 
         <Text
@@ -43,14 +41,18 @@ export const MovieReviewSection: FC<Props> = ({ movieId }) => {
         </Text>
       </div>
 
-      {reviews.map((review) => (
-        <ReviewCard
-          key={review.id}
-          review={review}
-        />
-      ))}
+      {reviews.length !== 0 && (
+        <>
+          {reviews.map((review) => (
+            <ReviewCard
+              key={review.id}
+              review={review}
+            />
+          ))}
 
-      <Button variant="outlined">Посмотреть всё</Button>
+          <Button variant="outlined">Посмотреть всё</Button>
+        </>
+      )}
     </div>
   );
 };

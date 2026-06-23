@@ -1,4 +1,4 @@
-import { capitalize } from "@/shared/lib/capitalize";
+import { capitalize } from "@/shared/lib/capitalize/capitalize";
 
 import { getGenres } from "@/entities/genre/api/getGenres";
 import { getMoviesByGenre } from "@/entities/movie/api/getMoviesByGenre";

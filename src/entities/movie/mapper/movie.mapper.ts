@@ -1,6 +1,6 @@
 import type { Movie } from "../model/movie.types";
 import { getPosterUrl } from "../lib/getPosterUrl";
-import { capitalize } from "@/shared/lib/capitalize";
+import { capitalize } from "@/shared/lib/capitalize/capitalize";
 
 type MovieDto = {
   id?: number;
