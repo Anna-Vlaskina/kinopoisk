@@ -1,11 +1,15 @@
 import type { FC } from "react";
-import { Badge } from "@/shared/ui/Badge";
+
+import clsx from "clsx";
+
+import { Badge } from "@/shared/ui/badge";
 import { Text } from "@/shared/ui/text";
 import { Separator } from "@/shared/ui/separator";
 import { formatRuntime } from "@/shared/lib/formatters/formatRuntime";
-import styles from "./MovieMeta.module.css";
+
 import type { MovieMetaProps } from "./MovieMeta.types";
-import clsx from "clsx";
+
+import styles from "./MovieMeta.module.css";
 
 export const MovieMeta: FC<MovieMetaProps> = (props) => {
   const { rating, type, genre, date, country, runtime, color = "secondary" } = props;

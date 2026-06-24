@@ -1,8 +1,12 @@
 import type { FC } from "react";
-import { footerSections } from "../../model/footerSections";
-import { Text } from "@/shared/ui/text/Text";
-import styles from "./FooterNavigation.module.css";
+
 import clsx from "clsx";
+
+import { Text } from "@/shared/ui/text";
+
+import { footerSections } from "../../model/footerSections";
+
+import styles from "./FooterNavigation.module.css";
 
 export const FooterNavigation: FC = () => {
   return (

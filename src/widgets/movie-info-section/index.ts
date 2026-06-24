@@ -1,1 +1,1 @@
-export { MovieInfoSection } from "./movie-info-section/MovieInfoSection";
+export { MovieInfoSection } from "./MovieInfoSection";

@@ -1,0 +1,23 @@
+.tile {
+  position: relative;
+  display: inline-block;
+}
+
+.tile::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 70%),
+    rgb(0 0 0 / 20%)
+  );
+}
+
+.text {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  z-index: 2;
+}

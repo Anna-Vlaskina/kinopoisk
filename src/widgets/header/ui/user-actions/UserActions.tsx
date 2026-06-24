@@ -1,11 +1,15 @@
-import styles from "./UserActions.module.css";
+import type { FC } from "react";
+
+import clsx from "clsx";
+
 import SearchIcon from "@/shared/assets/icons/search.svg?react";
 import BellIcon from "@/shared/assets/icons/bell.svg?react";
 import ProfileIcon from "@/shared/assets/icons/profile.svg?react";
-import { Button } from "@/shared/ui/Button";
-import type { FC } from "react";
+import { Button } from "@/shared/ui/button";
+
 import type { UserActionsProps } from "./UserActions.types";
-import clsx from "clsx";
+
+import styles from "./UserActions.module.css";
 
 export const UserActions: FC<UserActionsProps> = ({
   isAuth,

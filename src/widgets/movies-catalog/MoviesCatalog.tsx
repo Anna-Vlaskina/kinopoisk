@@ -1,11 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, type FC } from "react";
+
+import clsx from "clsx";
+
+import { CardRow } from "@/shared/ui/card-row";
+import { Text } from "@/shared/ui/text";
+
+import { MovieCollectionCard } from "@/entities/movie/ui/movie-cards";
+
 import type { MoviesCatalogSection } from "./MoviesCatalog.types";
 import { getMovieSections } from "./api/getMovieSections";
-import { MovieRow } from "@/widgets/movie-row/MovieRow";
+
 import styles from "./MoviesCatalog.module.css";
-import { Text } from "@/shared/ui/text";
-import type { FC } from "react";
-import clsx from "clsx";
 
 export const MoviesCatalog: FC = () => {
   const [sections, setSections] = useState<MoviesCatalogSection[]>([]);
@@ -36,7 +41,11 @@ export const MoviesCatalog: FC = () => {
             {section.title}
           </Text>
 
-          <MovieRow movies={section.movies} />
+          <CardRow
+            items={section.movies}
+            getKey={(movie) => movie.id}
+            renderItem={(movie) => <MovieCollectionCard movie={movie} />}
+          />
         </section>
       ))}
     </div>

@@ -1,10 +1,14 @@
 import { useState, type FC } from "react";
+
 import { Link } from "react-router-dom";
-import { UserActions } from "../user-actions";
-import { Logo } from "@/shared/ui/Logo";
-import { HeaderNavigation } from "../Navigation";
-import styles from "./Header.module.css";
 import clsx from "clsx";
+
+import { Logo } from "@/shared/ui/logo";
+
+import { UserActions } from "../user-actions";
+import { HeaderNavigation } from "../Navigation";
+
+import styles from "./Header.module.css";
 
 export const Header: FC = () => {
   const [isAuth, setIsAuth] = useState(false);

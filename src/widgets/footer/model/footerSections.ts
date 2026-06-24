@@ -3,6 +3,7 @@ import VkIcon from "@/shared/assets/icons/vk.svg?react";
 import InstagramIcon from "@/shared/assets/icons/instagram.svg?react";
 import TelephoneIcon from "@/shared/assets/icons/telephone.svg?react";
 import MailIcon from "@/shared/assets/icons/mail.svg?react";
+
 import type { TFooterSection } from "./footerSections.types";
 
 export const footerSections: TFooterSection[] = [
