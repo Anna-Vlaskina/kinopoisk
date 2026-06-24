@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import clsx from "clsx";
 
-import { Text } from "@/shared/ui/text/Text";
+import { Text } from "@/shared/ui/text";
 
 import { footerSections } from "../../model/footerSections";
 
