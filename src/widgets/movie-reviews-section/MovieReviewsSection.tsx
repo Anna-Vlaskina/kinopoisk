@@ -1,25 +1,19 @@
-import { useState, useEffect, type FC } from "react";
+import { useState, type FC } from "react";
 
 import { Text } from "@/shared/ui/text";
 import { Button } from "@/shared/ui/button";
 
 import { ReviewCard } from "@/entities/review/ui";
 import type { Review } from "@/entities/review/model/review.types";
-import { getMovieReviews } from "@/entities/review/api/getMovieReviews";
 
 import { ReviewCreateForm } from "@/features/review-create/ui/ReviewCreateForm";
 
 type Props = {
-  movieId: number;
+  reviews: Review[];
 };
 
-export const MovieReviewSection: FC<Props> = ({ movieId }) => {
-  const [reviews, setReviews] = useState<Review[]>([]);
+export const MovieReviewSection: FC<Props> = ({ reviews }) => {
   const [isEditorOpen, setIsEditorOpen] = useState(false);
-
-  useEffect(() => {
-    getMovieReviews(movieId).then(setReviews);
-  }, [movieId]);
 
   return (
     <div>
@@ -40,12 +34,7 @@ export const MovieReviewSection: FC<Props> = ({ movieId }) => {
         </Button>
       </div>
 
-      {isEditorOpen && (
-        <ReviewCreateForm
-          movieId={movieId}
-          onClose={() => setIsEditorOpen(false)}
-        />
-      )}
+      {isEditorOpen && <ReviewCreateForm onClose={() => setIsEditorOpen(false)} />}
 
       {reviews.length !== 0 && (
         <>

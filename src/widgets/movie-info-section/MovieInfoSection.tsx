@@ -1,67 +1,56 @@
-import { useState, useEffect, type FC } from "react";
+import type { FC } from "react";
 
 import clsx from "clsx";
 
 import { formatRuntime } from "@/shared/lib/formatters/formatRuntime";
 
 import type { MovieInfo } from "@/entities/movie/model/movie-info.types";
-import { getMovieInfo } from "@/entities/movie/api/getMovieInfo";
 
 import { MovieInfoItem } from "./MovieInfoItem";
 
 import styles from "./MovieInfoSection.module.css";
 
 type Props = {
-  movieId: number;
+  movieInfo: MovieInfo;
 };
 
-export const MovieInfoSection: FC<Props> = ({ movieId }) => {
-  const [movie, setMovie] = useState<MovieInfo | null>(null);
-
-  useEffect(() => {
-    getMovieInfo(movieId).then(setMovie);
-  }, [movieId]);
-
-  if (!movie) {
-    return null;
-  }
-
+export const MovieInfoSection: FC<Props> = ({ movieInfo }) => {
   return (
     <dl className={clsx(styles.section)}>
       <MovieInfoItem
         term={"Рейтинг IMDb:"}
-        description={movie.tmdbRating}
+        description={movieInfo.tmdbRating}
         variant="badge"
       />
 
       <MovieInfoItem
         term={"Жанр:"}
-        description={movie.genres.join(", ")}
+        description={movieInfo.genres.join(", ")}
       />
 
       <MovieInfoItem
         term={"Режиссёр:"}
-        description={movie.director}
+        description={movieInfo.director}
       />
 
       <MovieInfoItem
         term={"Актёрский состав:"}
-        description={movie.cast.join(", ")}
+        description={movieInfo.cast.join(", ")}
       />
 
       <MovieInfoItem
         term={"Страна:"}
-        description={movie.countries.join(", ")}
+        description={movieInfo.countries.join(", ")}
       />
 
       <MovieInfoItem
         term={"Время:"}
-        description={formatRuntime(movie.runtime)}
+        description={formatRuntime(movieInfo.runtime)}
       />
 
       <MovieInfoItem
         term={"Аудиодорожки:"}
-        description={movie.languages.join(", ")}
+        description={movieInfo.languages.join(", ")}
       />
     </dl>
   );

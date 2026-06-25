@@ -1,4 +1,4 @@
-import { useState, useEffect, type FC } from "react";
+import type { FC } from "react";
 
 import clsx from "clsx";
 
@@ -8,17 +8,14 @@ import { Text } from "@/shared/ui/text";
 import { MovieCollectionCard } from "@/entities/movie/ui/movie-cards";
 
 import type { MoviesCatalogSection } from "./MoviesCatalog.types";
-import { getMovieSections } from "./api/getMovieSections";
 
 import styles from "./MoviesCatalog.module.css";
 
-export const MoviesCatalog: FC = () => {
-  const [sections, setSections] = useState<MoviesCatalogSection[]>([]);
+type Props = {
+  sections: MoviesCatalogSection[];
+};
 
-  useEffect(() => {
-    getMovieSections().then(setSections);
-  }, []);
-
+export const MoviesCatalog: FC<Props> = ({ sections }) => {
   return (
     <div className={clsx(styles.root)}>
       <Text

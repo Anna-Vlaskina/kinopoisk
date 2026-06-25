@@ -12,7 +12,6 @@ import { ReviewPreview } from "./ReviewPreview";
 import styles from "./ReviewCreateForm.module.css";
 
 type Props = {
-  movieId: number;
   onClose: () => void;
 };
 

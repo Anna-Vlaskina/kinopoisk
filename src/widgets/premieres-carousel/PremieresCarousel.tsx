@@ -1,4 +1,4 @@
-import { useState, useEffect, type FC } from "react";
+import type { FC } from "react";
 
 import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,7 +7,6 @@ import { EffectCreative, Navigation } from "swiper/modules";
 import "@/shared/lib/swiper/styles";
 
 import type { PremiereMovie } from "@/entities/movie/model/premiere-movie.types";
-import { getUpcomingMovies } from "@/entities/movie/api/getUpcomingMovies";
 import { MoviePremiereCard } from "@/entities/movie/ui/movie-cards";
 
 import styles from "./PremieresCarousel.module.css";
@@ -15,13 +14,11 @@ import styles from "./PremieresCarousel.module.css";
 const Z_AXIS_DEPH = -436;
 const MOVE_PERCENTAGE = "92%";
 
-export const PremieresCarousel: FC = () => {
-  const [premieres, setPremieres] = useState<PremiereMovie[]>([]);
+type Props = {
+  premieres: PremiereMovie[];
+};
 
-  useEffect(() => {
-    getUpcomingMovies().then(setPremieres);
-  }, []);
-
+export const PremieresCarousel: FC<Props> = ({ premieres }) => {
   return (
     <div className={styles.viewport}>
       <Swiper
