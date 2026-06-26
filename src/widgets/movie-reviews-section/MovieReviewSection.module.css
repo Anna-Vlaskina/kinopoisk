@@ -1,0 +1,10 @@
+.section {
+  width: 700px;
+  padding: 60px 100px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  padding-bottom: 60px;
+}

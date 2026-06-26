@@ -5,10 +5,11 @@ import clsx from "clsx";
 import { Button } from "@/shared/ui/button";
 import Triangle from "@/shared/assets/icons/triangle.svg?react";
 import FilePlus from "@/shared/assets/icons/file-plus.svg?react";
-import Heart from "@/shared/assets/icons/heart.svg?react";
 
 import { MovieMeta } from "@/entities/movie/ui/movie-meta";
 import type { MovieDetails } from "@/entities/movie/model/movie-details.types";
+
+import { MovieLikeButton } from "@/features/movie-like/ui/MovieLikeButton";
 
 import { MovieHeroHeader } from "./MovieHeroHeader";
 
@@ -58,12 +59,7 @@ export const MovieHero: FC<Props> = ({ movie }) => {
           <FilePlus />
         </Button>
 
-        <Button
-          variant="outlined"
-          type="button"
-        >
-          <Heart />
-        </Button>
+        <MovieLikeButton movieId={Number(movie.id)}></MovieLikeButton>
       </div>
     </div>
   );
