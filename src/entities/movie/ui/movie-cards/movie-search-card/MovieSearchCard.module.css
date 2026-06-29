@@ -1,0 +1,9 @@
+.card {
+  display: flex;
+  gap: 10px;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}

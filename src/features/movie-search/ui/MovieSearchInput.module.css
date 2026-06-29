@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+}
+
+.input {
+  width: 500px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-white-primary);
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+input::placeholder {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-white-secondary);
+}
