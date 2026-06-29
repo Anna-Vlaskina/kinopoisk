@@ -16,8 +16,6 @@ type Props = {
 export const MovieLikeButton: FC<Props> = ({ movieId }) => {
   const { liked, toggleLike } = useMovieLike(movieId);
 
-  console.log("MovieLikeButton", movieId, liked);
-
   return (
     <Button
       variant="outlined"

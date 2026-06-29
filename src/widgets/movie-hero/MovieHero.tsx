@@ -1,9 +1,8 @@
-import { type FC, useState } from "react";
+import type { FC } from "react";
 
 import clsx from "clsx";
 
 import { Button } from "@/shared/ui/button";
-import { Modal } from "@/shared/ui/modal";
 import Triangle from "@/shared/assets/icons/triangle.svg?react";
 import FilePlus from "@/shared/assets/icons/file-plus.svg?react";
 
@@ -11,6 +10,7 @@ import { MovieMeta } from "@/entities/movie/ui/movie-meta";
 import type { MovieDetails } from "@/entities/movie/model/movie-details.types";
 
 import { MovieLikeButton } from "@/features/movie-like/ui/MovieLikeButton";
+import { MovieTrailerButton } from "@/features/movie-trailer/ui/MovieTrailerButton";
 
 import { MovieHeroHeader } from "./MovieHeroHeader";
 
@@ -21,8 +21,6 @@ type Props = {
 };
 
 export const MovieHero: FC<Props> = ({ movie }) => {
-  const [isTrailerOpen, setIsTrailerOpen] = useState(false);
-
   return (
     <>
       <div className={clsx(styles.container)}>
@@ -49,13 +47,7 @@ export const MovieHero: FC<Props> = ({ movie }) => {
             Смотреть фильм
           </Button>
 
-          <Button
-            variant="outlined"
-            type="button"
-            onClick={() => setIsTrailerOpen(true)}
-          >
-            Трейлер
-          </Button>
+          <MovieTrailerButton movieId={Number(movie.id)}></MovieTrailerButton>
 
           <Button
             variant="outlined"
@@ -67,13 +59,6 @@ export const MovieHero: FC<Props> = ({ movie }) => {
           <MovieLikeButton movieId={Number(movie.id)}></MovieLikeButton>
         </div>
       </div>
-
-      <Modal
-        isOpen={isTrailerOpen}
-        onClose={() => setIsTrailerOpen(false)}
-      >
-        {"Здесь будет плеер"}
-      </Modal>
     </>
   );
 };
