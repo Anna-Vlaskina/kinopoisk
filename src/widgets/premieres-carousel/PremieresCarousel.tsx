@@ -3,6 +3,7 @@ import type { FC } from "react";
 import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCreative, Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 import "@/shared/lib/swiper/styles";
 
@@ -16,9 +17,10 @@ const MOVE_PERCENTAGE = "92%";
 
 type Props = {
   premieres: PremiereMovie[];
+  onClick?: () => void;
 };
 
-export const PremieresCarousel: FC<Props> = ({ premieres }) => {
+export const PremieresCarousel: FC<Props> = ({ premieres, onClick }) => {
   return (
     <div className={styles.viewport}>
       <Swiper
@@ -40,7 +42,13 @@ export const PremieresCarousel: FC<Props> = ({ premieres }) => {
             key={premiere.id}
             className={clsx(styles.slide)}
           >
-            <MoviePremiereCard movie={premiere} />
+            <Link
+              to={`/movie/${premiere.id}`}
+              onClick={onClick}
+              className={clsx(styles.link)}
+            >
+              <MoviePremiereCard movie={premiere} />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

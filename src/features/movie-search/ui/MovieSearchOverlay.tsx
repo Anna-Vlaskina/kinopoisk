@@ -1,4 +1,4 @@
-import { type FC, useState } from "react";
+import { type FC, useState, useEffect, useRef } from "react";
 
 import clsx from "clsx";
 
@@ -23,8 +23,27 @@ export const MovieSearchOverlay: FC<Props> = ({ onClose }) => {
 
   const { movies, isLoading } = useMovieSearch(query);
 
+  const overlayRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (overlayRef.current && !overlayRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);
+
   return (
-    <div className={clsx(styles.overlay)}>
+    <div
+      ref={overlayRef}
+      className={clsx(styles.overlay)}
+    >
       <header className={clsx(styles.header)}>
         <Link to="/">
           <Logo />
@@ -48,6 +67,7 @@ export const MovieSearchOverlay: FC<Props> = ({ onClose }) => {
       <MovieSearchPanel
         movies={movies.slice(0, 6)}
         isLoading={isLoading}
+        onClose={onClose}
       />
     </div>
   );

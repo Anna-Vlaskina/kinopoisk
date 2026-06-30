@@ -10,9 +10,10 @@ import styles from "./MovieSearchPanel.module.css";
 type Props = {
   movies: SearchMovie[];
   isLoading: boolean;
+  onClose: () => void;
 };
 
-export const MovieSearchPanel: FC<Props> = ({ movies, isLoading }) => {
+export const MovieSearchPanel: FC<Props> = ({ movies, isLoading, onClose }) => {
   if (isLoading) {
     return <div className={clsx(styles.panel)}>Поиск...</div>;
   }
@@ -28,6 +29,7 @@ export const MovieSearchPanel: FC<Props> = ({ movies, isLoading }) => {
           <MovieSearchCard
             key={movie.id}
             movie={movie}
+            onClick={onClose}
           />
         ))}
       </div>
