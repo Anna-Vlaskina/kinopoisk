@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "analyze": "tsc -b && vite build --mode analyze",
     "preview": "vite preview",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix",
