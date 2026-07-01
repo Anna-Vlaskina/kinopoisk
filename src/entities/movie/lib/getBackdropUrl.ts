@@ -1,5 +1,5 @@
-export const BACKDROP_BASE_URL = "https://image.tmdb.org/t/p/original";
+import { TMDB_IMAGE } from "@/shared/config/tmdb";
 
 export const getBackdropUrl = (backdropPath?: string | null): string => {
-  return backdropPath ? `${BACKDROP_BASE_URL}${backdropPath}` : "";
+  return backdropPath ? `${TMDB_IMAGE.backdrop}${backdropPath}` : "";
 };

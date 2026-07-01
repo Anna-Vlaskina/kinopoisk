@@ -1,3 +1,3 @@
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
+import { TMDB_IMAGE } from "@/shared/config/tmdb";
 
-export const getPosterUrl = (path?: string): string => (path ? `${IMAGE_BASE_URL}${path}` : "");
+export const getPosterUrl = (path?: string): string => (path ? `${TMDB_IMAGE.poster}${path}` : "");

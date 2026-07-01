@@ -1,4 +1,4 @@
-const STORAGE_KEY = "likedMovies";
+import { STORAGE_KEY } from "@/shared/config/constants";
 
 export const getLikedMovies = (): number[] => {
   const value = localStorage.getItem(STORAGE_KEY);

@@ -1,4 +1,4 @@
-const AVATAR_BASE_URL = "https://image.tmdb.org/t/p/w185";
+import { TMDB_IMAGE } from "@/shared/config/tmdb";
 
 export const getAvatarUrl = (avatarPath?: string | null): string => {
   if (!avatarPath) {
@@ -9,5 +9,5 @@ export const getAvatarUrl = (avatarPath?: string | null): string => {
     return avatarPath.slice(1);
   }
 
-  return `${AVATAR_BASE_URL}${avatarPath}`;
+  return `${TMDB_IMAGE.avatar}${avatarPath}`;
 };

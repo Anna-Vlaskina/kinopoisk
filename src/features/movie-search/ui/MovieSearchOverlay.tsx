@@ -1,8 +1,8 @@
-import { type FC, useState, useEffect, useRef } from "react";
+import { type FC, useState, useRef } from "react";
 
 import clsx from "clsx";
-
 import { Link } from "react-router-dom";
+import { useClickAway } from "react-use";
 
 import { Logo } from "@/shared/ui/logo";
 import { Button } from "@/shared/ui/button";
@@ -25,19 +25,7 @@ export const MovieSearchOverlay: FC<Props> = ({ onClose }) => {
 
   const overlayRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (overlayRef.current && !overlayRef.current.contains(event.target as Node)) {
-        onClose();
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [onClose]);
+  useClickAway(overlayRef, onClose);
 
   return (
     <div
