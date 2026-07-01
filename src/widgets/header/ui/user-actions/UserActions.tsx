@@ -2,7 +2,6 @@ import type { FC } from "react";
 
 import clsx from "clsx";
 
-import SearchIcon from "@/shared/assets/icons/search.svg?react";
 import BellIcon from "@/shared/assets/icons/bell.svg?react";
 import ProfileIcon from "@/shared/assets/icons/profile.svg?react";
 import { Button } from "@/shared/ui/button";
@@ -18,11 +17,6 @@ export const UserActions: FC<UserActionsProps> = ({
 }: UserActionsProps) => {
   return (
     <div className={clsx(styles.container)}>
-      <Button variant="only-icon">
-        <SearchIcon />
-        <span className={clsx(styles.span)}>Поиск</span>
-      </Button>
-
       <Button variant="only-icon">
         <BellIcon />
       </Button>

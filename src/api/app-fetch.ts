@@ -1,5 +1,5 @@
-const API_KEY = import.meta.env.VITE_API_KEY as string;
-const DEFAULT_LANGUAGE = "ru-RU";
+import { API_KEY } from "@/shared/config/constants";
+import { DEFAULT_LANGUAGE } from "@/shared/config/constants";
 
 const getBody = <T>(c: Response | Request): Promise<T> => {
   const contentType = c.headers.get("content-type");

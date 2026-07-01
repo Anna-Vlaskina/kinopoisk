@@ -1,29 +1,30 @@
-import { useState, useEffect, type FC } from "react";
+import { useState, type FC } from "react";
+
+import clsx from "clsx";
 
 import { Text } from "@/shared/ui/text";
 import { Button } from "@/shared/ui/button";
 
 import { ReviewCard } from "@/entities/review/ui";
 import type { Review } from "@/entities/review/model/review.types";
-import { getMovieReviews } from "@/entities/review/api/getMovieReviews";
 
 import { ReviewCreateForm } from "@/features/review-create/ui/ReviewCreateForm";
 
+import styles from "./MovieReviewSection.module.css";
+
 type Props = {
-  movieId: number;
+  reviews: Review[];
 };
 
-export const MovieReviewSection: FC<Props> = ({ movieId }) => {
-  const [reviews, setReviews] = useState<Review[]>([]);
+export const MovieReviewSection: FC<Props> = ({ reviews }) => {
   const [isEditorOpen, setIsEditorOpen] = useState(false);
+  const [showAll, setShowAll] = useState(false);
 
-  useEffect(() => {
-    getMovieReviews(movieId).then(setReviews);
-  }, [movieId]);
+  const visibleReviews = showAll ? reviews : reviews.slice(0, 2);
 
   return (
-    <div>
-      <div>
+    <div className={clsx(styles.section)}>
+      <div className={clsx(styles.heading)}>
         <Text
           tag="h2"
           size="2xl"
@@ -40,23 +41,25 @@ export const MovieReviewSection: FC<Props> = ({ movieId }) => {
         </Button>
       </div>
 
-      {isEditorOpen && (
-        <ReviewCreateForm
-          movieId={movieId}
-          onClose={() => setIsEditorOpen(false)}
-        />
-      )}
+      {isEditorOpen && <ReviewCreateForm onClose={() => setIsEditorOpen(false)} />}
 
       {reviews.length !== 0 && (
         <>
-          {reviews.map((review) => (
+          {visibleReviews.map((review) => (
             <ReviewCard
               key={review.id}
               review={review}
             />
           ))}
 
-          <Button variant="outlined">Посмотреть всё</Button>
+          {reviews.length > 2 && (
+            <Button
+              variant="outlined"
+              onClick={() => setShowAll((prev) => !prev)}
+            >
+              {showAll ? "Скрыть" : "Посмотреть всё"}
+            </Button>
+          )}
         </>
       )}
     </div>

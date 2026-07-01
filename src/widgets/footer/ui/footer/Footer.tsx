@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 
 import { Logo } from "@/shared/ui/logo";
 import { Text } from "@/shared/ui/text";
@@ -13,7 +14,9 @@ export const Footer: FC = () => {
   return (
     <>
       <div className={clsx(styles.footer)}>
-        <Logo></Logo>
+        <Link to={`/`}>
+          <Logo />
+        </Link>
         <FooterNavigation></FooterNavigation>
       </div>
       <Text

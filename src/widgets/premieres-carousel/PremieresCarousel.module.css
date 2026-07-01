@@ -25,3 +25,8 @@
 .slide:global(.swiper-slide-visible){
   opacity: 1 !important;
 }
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -5,6 +5,8 @@ import clsx from "clsx";
 
 import { Logo } from "@/shared/ui/logo";
 
+import { MovieSearch } from "@/features/movie-search/ui/MovieSearch";
+
 import { UserActions } from "../user-actions";
 import { HeaderNavigation } from "../Navigation";
 
@@ -12,6 +14,7 @@ import styles from "./Header.module.css";
 
 export const Header: FC = () => {
   const [isAuth, setIsAuth] = useState(false);
+
   return (
     <header className={clsx(styles.header)}>
       <Link
@@ -20,7 +23,11 @@ export const Header: FC = () => {
       >
         <Logo />
       </Link>
+
       <HeaderNavigation></HeaderNavigation>
+
+      <MovieSearch></MovieSearch>
+
       <UserActions
         isAuth={isAuth}
         onLogin={() => setIsAuth(true)}

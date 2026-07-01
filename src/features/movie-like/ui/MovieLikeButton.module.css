@@ -1,0 +1,7 @@
+.icon {
+  fill: var(--color-accent);
+}
+
+.icon path {
+  stroke: var(--color-accent);
+}

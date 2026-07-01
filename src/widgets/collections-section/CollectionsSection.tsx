@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import type { FC } from "react";
 
 import clsx from "clsx";
@@ -8,17 +7,14 @@ import { Text } from "@/shared/ui/text";
 
 import { CollectionTile } from "@/entities/collection/ui/collection-tile";
 import type { Collection } from "@/entities/collection/model/collection.types";
-import { getCollections } from "@/entities/collection/api/getCollections";
 
 import styles from "./CollectionsSection.module.css";
 
-export const CollectionsSection: FC = () => {
-  const [collections, setCollections] = useState<Collection[]>([]);
+type Props = {
+  collections: Collection[];
+};
 
-  useEffect(() => {
-    getCollections().then(setCollections);
-  }, []);
-
+export const CollectionsSection: FC<Props> = ({ collections }) => {
   return (
     <div className={clsx(styles.root)}>
       <Text
