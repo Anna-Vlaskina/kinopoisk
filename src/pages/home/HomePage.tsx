@@ -11,6 +11,7 @@ import { CollectionsSection } from "@/widgets/collections-section";
 
 import type { HomePageData } from "./HomePage.type";
 import { getHomePageData } from "./api/getHomePageData";
+import { PageSkeleton } from "../PageSkeleton";
 
 import styles from "./HomePage.module.css";
 
@@ -22,7 +23,7 @@ export const HomePage: FC = () => {
   }, []);
 
   if (!data) {
-    return null;
+    return <PageSkeleton />;
   }
 
   return (

@@ -11,6 +11,7 @@ import { MovieReviewSection } from "@/widgets/movie-reviews-section";
 
 import { getMoviePageData } from "./api/getMoviePageData";
 import type { MoviePageData } from "./MoviePage.type";
+import { PageSkeleton } from "../PageSkeleton";
 
 import styles from "./MoviePage.module.css";
 
@@ -28,7 +29,7 @@ export const MoviePage: FC = () => {
   }, [movieId]);
 
   if (!movieId || !data) {
-    return null;
+    return <PageSkeleton />;
   }
 
   return (

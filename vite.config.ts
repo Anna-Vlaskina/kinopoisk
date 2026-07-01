@@ -35,6 +35,38 @@ export default defineConfig(({ mode }) => {
 
     build: {
       sourcemap: true,
+
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (!id.includes("node_modules")) {
+              return;
+            }
+
+            if (id.includes("/react/") || id.includes("/react-dom/")) {
+              return "react";
+            }
+
+            if (id.includes("/react-router-dom/")) {
+              return "router";
+            }
+
+            if (id.includes("/swiper/")) {
+              return "swiper";
+            }
+
+            if (id.includes("/marked/") || id.includes("/dompurify/")) {
+              return "markdown";
+            }
+
+            if (id.includes("/clsx/") || id.includes("/date-fns/") || id.includes("/react-use/")) {
+              return "utils";
+            }
+
+            return "vendor";
+          },
+        },
+      },
     },
   };
 });
